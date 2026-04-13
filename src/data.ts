@@ -60,7 +60,7 @@ export const initialData: StatutoryLink[] = [
         id: 'sec-1',
         title: '1. Basic Institutional Information',
         items: [
-          { idNo: '', type: 'Emblem', description: '', value: '/logo.png', isLink: false, isImage: true },
+          { idNo: '', type: 'Emblem', description: '', value: '/emblem.png', isLink: false, isImage: true },
           { idNo: '1.1', type: 'Name of the Institution', description: 'Institution Name', value: 'VISHNU INSTITUTE OF TECHNOLOGY (A)', isLink: false },
           { idNo: '1.2', type: 'Category & Type', description: 'Type', value: 'Private Affiliated & Autonomous Institution', isLink: false },
           { idNo: '1.3', type: 'Year of Establishment', description: 'Year', value: '2008', isLink: false },

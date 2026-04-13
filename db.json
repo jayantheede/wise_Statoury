@@ -228,7 +228,7 @@
               "idNo": "",
               "type": "",
               "description": "Emblem",
-              "value": "https://drive.google.com/file/d/1JYE_roHeevujm6E_4T7o3cUQaSEpHbJg/view?usp=sharing",
+              "value": "/emblem.png",
               "isLink": false,
               "isImage": true
             }
@@ -1898,7 +1898,7 @@
     "designation": "Sr. Psychologist",
     "qualifications": "M.Sc. (Psychology),PG Diploma in Mental Health",
     "description": "A psychologist studies human behavior and mental processes... They play a vital role...",
-    "mou1Link": "#",
-    "mou2Link": "#"
+    "mou1Link": "",
+    "mou2Link": ""
   }
 }
