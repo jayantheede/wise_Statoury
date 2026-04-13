@@ -136,7 +136,7 @@ export const StatutoryDetail: React.FC = () => {
       </main>
 
       <footer className="py-12 text-center text-gray-400 text-sm border-t border-gray-200 bg-white mt-12">
-        <p>© 2026 Vishnu Institute of Technology. All Rights Reserved.</p>
+        <p>© 2026 West Godavari Institute of Science and Engineering. All Rights Reserved.</p>
       </footer>
     </div>
   );
