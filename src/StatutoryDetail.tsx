@@ -78,7 +78,7 @@ export const StatutoryDetail: React.FC = () => {
                                 <img src={getResolvedImageUrl(item.value)} alt={item.type || 'Image'} className="h-16 object-contain" />
                               ) : item.isLink ? (
                                 <a 
-                                  href={item.value} 
+                                  href={item.value.startsWith('http') || item.value.startsWith('mailto:') || item.value.startsWith('tel:') || item.value.startsWith('data:') ? item.value : `https://${item.value}`} 
                                   target="_blank" 
                                   rel="noopener noreferrer"
                                   className="view-btn-green"

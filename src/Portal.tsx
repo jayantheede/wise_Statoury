@@ -41,7 +41,7 @@ export const Portal: React.FC = () => {
                           {link.title}
                         </Link>
                       ) : (
-                        <a href={link.url} className="statutory-link" target="_blank" rel="noopener noreferrer">
+                        <a href={link.url.startsWith('http') || link.url.startsWith('mailto:') || link.url.startsWith('tel:') || link.url.startsWith('data:') ? link.url : `https://${link.url}`} className="statutory-link" target="_blank" rel="noopener noreferrer">
                           {link.title}
                         </a>
                       )}

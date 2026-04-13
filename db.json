@@ -1521,35 +1521,35 @@
               "type": " Dr. M . Aravind Kumar",
               "description": "Principal",
               "value": "Chairman",
-              "isLink": true
+              "isLink": false
             },
             {
               "idNo": "2",
               "type": "Dr. P.Amaravathi",
               "description": "Professor-CSE",
               "value": "Member Secretary",
-              "isLink": true
+              "isLink": false
             },
             {
               "idNo": "3",
               "type": "Dr. A .S . Prasad",
               "description": "HOD -MBA",
               "value": "Member",
-              "isLink": true
+              "isLink": false
             },
             {
               "idNo": "4",
               "type": "Smt.N.L. Tejaswini",
               "description": "Assistant Professor CSE DS",
               "value": "Member",
-              "isLink": true
+              "isLink": false
             },
             {
               "idNo": "5",
               "type": "Sri.N.Kondayya ",
               "description": "Assistant Professor ME",
               "value": "Member",
-              "isLink": true
+              "isLink": false
             }
           ]
         }
@@ -1818,12 +1818,6 @@
       "categoryId": "cat-3"
     },
     {
-      "id": "22",
-      "title": "NBA Accreditation",
-      "url": "#",
-      "categoryId": "cat-3"
-    },
-    {
       "id": "23",
       "title": "UGC and JNTUK Autonomous",
       "url": "#",
@@ -1866,12 +1860,6 @@
       "categoryId": "cat-4"
     },
     {
-      "id": "35",
-      "title": "Fire Certificate",
-      "url": "#",
-      "categoryId": "cat-4"
-    },
-    {
       "id": "36",
       "title": "Structural Stability Certificate",
       "url": "https://drive.google.com/file/d/1zwRNI776ZDoexwy3tprElojOCpfnnRA7/view?usp=sharing",
@@ -1880,13 +1868,13 @@
     {
       "id": "37",
       "title": "Public Self Disclosure",
-      "url": "#",
+      "url": "https://www.wise.ac.in/storage/Mandatory-Disclosures-1.pdf",
       "categoryId": "cat-4"
     },
     {
       "id": "38",
       "title": "UGC 2F and 12B",
-      "url": "#",
+      "url": "https://drive.google.com/file/d/10kBCflnL5dHA4QujhlZfO0cLe2ffKU-R/view?usp=sharing",
       "categoryId": "cat-4"
     },
     {
