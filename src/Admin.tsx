@@ -8,7 +8,7 @@ import { AdminBlog } from './AdminBlog';
 import { AdminPsychologist } from './AdminPsychologist';
 
 export const Admin: React.FC = () => {
-  const { categories, links, addCategory, updateCategory, deleteCategory, addLink, updateLink, deleteLink, updateLinkSections, logout, heroImage, setHeroImage } = useCMS();
+  const { categories, links, addCategory, updateCategory, deleteCategory, addLink, updateLink, deleteLink, updateLinkFull, logout, heroImage, setHeroImage } = useCMS();
   const navigate = useNavigate();
   
   const [activeCategoryId, setActiveCategoryId] = useState<string>(categories[0]?.id || '');
@@ -24,9 +24,7 @@ export const Admin: React.FC = () => {
 
   const handleSaveSections = (data: { sections: StatutoryLink['sections'], images?: string[], customHeaders?: [string, string, string, string] }) => {
     if (managingLinkId) {
-      updateLinkSections(managingLinkId, data.sections);
-      updateLink(managingLinkId, { images: data.images, customHeaders: data.customHeaders });
-      setManagingLinkId(null);
+      updateLinkFull(managingLinkId, { sections: data.sections, images: data.images, customHeaders: data.customHeaders });
     }
   };
 

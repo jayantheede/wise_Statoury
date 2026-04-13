@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { type StatutoryLink } from './data';
-import { Plus, Trash2, X, Save, ArrowLeft, Upload } from 'lucide-react';
+import { Plus, Trash2, X, Save, ArrowLeft, Upload, Check } from 'lucide-react';
 
 interface ContentManagerProps {
   link: StatutoryLink;
@@ -12,6 +12,22 @@ export const ContentManager: React.FC<ContentManagerProps> = ({ link, onSave, on
   const [sections, setSections] = useState<StatutoryLink['sections']>(link.sections || []);
   const [images, setImages] = useState<string[]>(link.images || []);
   const [customHeaders, setCustomHeaders] = useState<[string, string, string, string]>(link.customHeaders || ['ID.No', 'Type', 'Description', 'Link / Description']);
+  const [saveStatus, setSaveStatus] = useState<string | null>(null);
+
+  // Auto-save effect
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      onSave({ sections, images, customHeaders });
+      setSaveStatus('Auto-saved successfully!');
+      setTimeout(() => setSaveStatus(null), 2000);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, [sections, images, customHeaders]);
+
+  const handleBack = () => {
+    onSave({ sections, images, customHeaders });
+    onCancel();
+  };
 
   const updateHeader = (idx: number, val: string) => {
     const newHeaders = [...customHeaders] as [string, string, string, string];
@@ -97,7 +113,7 @@ export const ContentManager: React.FC<ContentManagerProps> = ({ link, onSave, on
     <div className="content-manager pb-20">
       <div className="flex justify-between items-center mb-6">
         <div className="flex items-center gap-4">
-          <button onClick={onCancel} className="action-btn bg-white border border-gray-200">
+          <button onClick={handleBack} className="action-btn bg-white border border-gray-200" title="Save & Go Back">
             <ArrowLeft size={18} />
           </button>
           <div>
@@ -113,8 +129,8 @@ export const ContentManager: React.FC<ContentManagerProps> = ({ link, onSave, on
           <button onClick={addSection} className="btn btn-outline text-blue-600 bg-blue-50 border-blue-200">
             <Plus size={18} /> Add Section
           </button>
-          <button onClick={() => onSave({ sections, images, customHeaders })} className="btn btn-primary shadow-md">
-            <Save size={18} /> Save All Changes
+          <button onClick={() => { onSave({ sections, images, customHeaders }); handleBack(); }} className="btn btn-primary shadow-md relative overflow-hidden group">
+            {saveStatus ? <><Check size={18} /> {saveStatus}</> : <><Save size={18} /> Save All & Close</>}
           </button>
         </div>
       </div>

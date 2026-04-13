@@ -12,6 +12,7 @@ interface CMSContextType {
   updateLink: (id: string, updatedLink: Partial<StatutoryLink>) => void;
   deleteLink: (id: string) => void;
   updateLinkSections: (id: string, sections: StatutoryLink['sections']) => void;
+  updateLinkFull: (id: string, updated: Partial<StatutoryLink>) => void;
   addBlog: (blog: Omit<BlogPost, 'id'>) => void;
   updateBlog: (id: string, blog: Partial<BlogPost>) => void;
   deleteBlog: (id: string) => void;
@@ -69,7 +70,14 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ categories, links, heroImage, blogs, psychologist })
-    }).catch(console.error);
+    }).then(async res => {
+      if (!res.ok) {
+        alert("Failed to save data permanently! The uploaded document might be too large.");
+      }
+    }).catch(e => {
+      console.error(e);
+      alert("Network error: Failed to save to the database.");
+    });
   }, [categories, links, heroImage, blogs, psychologist, loading]);
 
   useEffect(() => { localStorage.setItem('vit_auth', isAuthenticated.toString()); }, [isAuthenticated]);
@@ -103,6 +111,10 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   const updateLinkSections = (id: string, sections: StatutoryLink['sections']) => {
     setLinks(prev => prev.map(l => l.id === id ? { ...l, sections } : l));
+  };
+
+  const updateLinkFull = (id: string, updated: Partial<StatutoryLink>) => {
+    setLinks(prev => prev.map(l => l.id === id ? { ...l, ...updated } : l));
   };
 
   const deleteLink = (id: string) => {
@@ -139,7 +151,7 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     <CMSContext.Provider value={{
       categories, links, blogs,
       addCategory, updateCategory, deleteCategory,
-      addLink, updateLink, deleteLink, updateLinkSections,
+      addLink, updateLink, deleteLink, updateLinkSections, updateLinkFull,
       addBlog, updateBlog, deleteBlog,
       psychologist, updatePsychologist,
       isAuthenticated, login, logout,
