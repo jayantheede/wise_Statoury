@@ -1,36 +1,27 @@
 const express = require('express');
 const cors = require('cors');
-const { MongoClient } = require('mongodb');
+const fs = require('fs');
+const path = require('path');
 
 const app = express();
 app.use(cors());
 app.use(express.json({ limit: '50mb' }));
 
-const uri = "mongodb+srv://edunexus03_db_user:1234567890@cluster0.kxw99mv.mongodb.net/edunexus?retryWrites=true&w=majority&appName=Cluster0";
-const client = new MongoClient(uri);
+const dbFile = path.join(__dirname, 'db.json');
 
-app.get('/api/data', async (req, res) => {
+app.get('/api/data', (req, res) => {
   try {
-    await client.connect();
-    const db = client.db('vishnu_statutory');
-    const data = await db.collection('portal_data').findOne({ _id: 'main' });
-    if (data) {
-      res.json(data);
-    } else {
-      res.json({ categories: null, links: null, heroImage: null });
-    }
+    const data = fs.readFileSync(dbFile, 'utf8');
+    res.json(JSON.parse(data));
   } catch(e) {
     console.error(e);
-    res.json({ categories: null, links: null, heroImage: null });
+    res.json({ categories: [], links: [] });
   }
 });
 
-app.post('/api/data', async (req, res) => {
+app.post('/api/data', (req, res) => {
   try {
-    await client.connect();
-    const db = client.db('vishnu_statutory');
-    const payload = { ...req.body, _id: 'main' };
-    await db.collection('portal_data').updateOne({ _id: 'main' }, { $set: payload }, { upsert: true });
+    fs.writeFileSync(dbFile, JSON.stringify(req.body, null, 2), 'utf8');
     res.json({ success: true });
   } catch(error) {
     console.error(error);
@@ -38,4 +29,4 @@ app.post('/api/data', async (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log('Backend listening on port 3000 (MongoDB Connected!)'));
+app.listen(3000, () => console.log('Backend listening on port 3000 (Local JSON restored!)'));
