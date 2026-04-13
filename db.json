@@ -1263,7 +1263,148 @@
       "id": "3",
       "title": "Governing Body",
       "url": "#",
-      "categoryId": "cat-1"
+      "categoryId": "cat-1",
+      "sections": [
+        {
+          "id": "sec-1776074379242",
+          "title": "New Section",
+          "items": [
+            {
+              "idNo": "1.",
+              "type": "Sri Nanadhyala Krishna Murthy",
+              "description": "Chairman",
+              "value": "#",
+              "isLink": true
+            },
+            {
+              "idNo": "2.",
+              "type": "Sri Ethakota Bhima Shankar Rao",
+              "description": "Vice-Chairman",
+              "value": "",
+              "isLink": false
+            },
+            {
+              "idNo": "3.",
+              "type": "Sri Akula Trimurthy",
+              "description": "Secretary & Correspondent",
+              "value": "",
+              "isLink": false
+            },
+            {
+              "idNo": "4.",
+              "type": "Sri Namana Rambabu",
+              "description": "Joint Secretary",
+              "value": "",
+              "isLink": false
+            },
+            {
+              "idNo": "5.",
+              "type": "Sri Sanam Mihir Mohan",
+              "description": "Treasurer",
+              "value": "",
+              "isLink": false
+            },
+            {
+              "idNo": "6.",
+              "type": "Sri Ethakota Konda Babu",
+              "description": "",
+              "value": "",
+              "isLink": false
+            },
+            {
+              "idNo": "7.",
+              "type": "Sri Kollapureddy Venkata Rama Rao",
+              "description": "",
+              "value": "",
+              "isLink": false
+            },
+            {
+              "idNo": "8.",
+              "type": "Sri Gattim Manikyala Rao",
+              "description": "",
+              "value": "",
+              "isLink": false
+            },
+            {
+              "idNo": "9.",
+              "type": "Sri Nandhyala Satyanarayana",
+              "description": "",
+              "value": "",
+              "isLink": false
+            },
+            {
+              "idNo": "10.",
+              "type": "Sri Janga Surya Prakash Balaji",
+              "description": "",
+              "value": "",
+              "isLink": false
+            },
+            {
+              "idNo": "11.",
+              "type": "Sri Kola Venkata Raju",
+              "description": "",
+              "value": "",
+              "isLink": false
+            },
+            {
+              "idNo": "12.",
+              "type": "Sri Kalla Trimurthulu",
+              "description": "",
+              "value": "",
+              "isLink": false
+            },
+            {
+              "idNo": "13.",
+              "type": "Smt Pasupulate Rama Lakshmi",
+              "description": "",
+              "value": "",
+              "isLink": false
+            },
+            {
+              "idNo": "14.",
+              "type": "Sri Kollapureddy Phani Krishna",
+              "description": "",
+              "value": "",
+              "isLink": false
+            },
+            {
+              "idNo": "15.",
+              "type": "Dr Ethakota N.V.V. Satyanarayana",
+              "description": "",
+              "value": "",
+              "isLink": false
+            },
+            {
+              "idNo": "16.",
+              "type": "Sri Gattim Naveen Kishore",
+              "description": "",
+              "value": "",
+              "isLink": false
+            },
+            {
+              "idNo": "17.",
+              "type": "Sri Palnati sujith Sai",
+              "description": "",
+              "value": "",
+              "isLink": false
+            },
+            {
+              "idNo": "18.",
+              "type": "Sri Gajula Srimannarayana Murthy ",
+              "description": "",
+              "value": "",
+              "isLink": false
+            }
+          ]
+        }
+      ],
+      "images": [],
+      "customHeaders": [
+        "ID.No",
+        "Member Name",
+        "Category",
+        "Link / Description"
+      ]
     },
     {
       "id": "4",
@@ -1303,10 +1444,10 @@
       "sections": [],
       "images": [],
       "customHeaders": [
-        "S.No",
-        "Member Name",
-        "Designation",
-        "Category/Position"
+        "",
+        "",
+        "",
+        ""
       ]
     },
     {
@@ -1314,7 +1455,49 @@
       "title": "Planning and Evaluation",
       "url": "#",
       "categoryId": "cat-2",
-      "sections": [],
+      "sections": [
+        {
+          "id": "sec-1776072066098",
+          "title": "New Section",
+          "items": [
+            {
+              "idNo": "1",
+              "type": "Dr.M.Aravind Kumar",
+              "description": "Principal",
+              "value": "Chairman",
+              "isLink": true
+            },
+            {
+              "idNo": "2",
+              "type": "Smt.P.Sravani",
+              "description": "Controller of examination Asst.Prof.of H&S",
+              "value": "Co-Ordinator",
+              "isLink": true
+            },
+            {
+              "idNo": "3",
+              "type": "Sri.K.Muralidhar",
+              "description": "Assistant Professor-MECH",
+              "value": "Member",
+              "isLink": true
+            },
+            {
+              "idNo": "4",
+              "type": "Sri.T.v.v.Anjaneyulu",
+              "description": "Admin Officer",
+              "value": "Member",
+              "isLink": true
+            },
+            {
+              "idNo": "5",
+              "type": "Smt.U.Jhansi Rani",
+              "description": "AGM Accounts",
+              "value": "Member",
+              "isLink": true
+            }
+          ]
+        }
+      ],
       "images": [],
       "customHeaders": [
         " S.No.",
@@ -1334,10 +1517,38 @@
           "title": "New Section",
           "items": [
             {
-              "idNo": "1.x",
-              "type": "New Type",
-              "description": "Description",
-              "value": "#",
+              "idNo": "1.",
+              "type": " Dr. M . Aravind Kumar",
+              "description": "Principal",
+              "value": "Chairman",
+              "isLink": true
+            },
+            {
+              "idNo": "2",
+              "type": "Dr. P.Amaravathi",
+              "description": "Professor-CSE",
+              "value": "Member Secretary",
+              "isLink": true
+            },
+            {
+              "idNo": "3",
+              "type": "Dr. A .S . Prasad",
+              "description": "HOD -MBA",
+              "value": "Member",
+              "isLink": true
+            },
+            {
+              "idNo": "4",
+              "type": "Smt.N.L. Tejaswini",
+              "description": "Assistant Professor CSE DS",
+              "value": "Member",
+              "isLink": true
+            },
+            {
+              "idNo": "5",
+              "type": "Sri.N.Kondayya ",
+              "description": "Assistant Professor ME",
+              "value": "Member",
               "isLink": true
             }
           ]
@@ -1355,13 +1566,190 @@
       "id": "13",
       "title": "Examination Committee",
       "url": "#",
-      "categoryId": "cat-2"
+      "categoryId": "cat-2",
+      "sections": [
+        {
+          "id": "sec-1776072807266",
+          "title": "New Section",
+          "items": [
+            {
+              "idNo": "1.",
+              "type": "Sri.K.Muralidhar",
+              "description": "Assistant Professor -ME",
+              "value": "Controller of examination",
+              "isLink": false
+            },
+            {
+              "idNo": "2",
+              "type": "Smt.P.Sravani",
+              "description": "Assistant Professor -H&S",
+              "value": "Additional Controller of Examinations-1",
+              "isLink": false
+            },
+            {
+              "idNo": "3",
+              "type": "Smt.B.Lavanya",
+              "description": "Assistant Professor -H&S",
+              "value": "Additional Controller of Examinations-11",
+              "isLink": false
+            },
+            {
+              "idNo": "4",
+              "type": "Sri.N.Kondayya",
+              "description": "Assistant Professor -ME",
+              "value": "Member",
+              "isLink": false
+            },
+            {
+              "idNo": "5",
+              "type": "Sri.A.Pavani",
+              "description": "Assistant Professor -CSE",
+              "value": "Member",
+              "isLink": false
+            },
+            {
+              "idNo": "6",
+              "type": "Smt.N.L.Tejaswini ",
+              "description": "Assistant Professor -CSE-DS",
+              "value": "Member",
+              "isLink": false
+            },
+            {
+              "idNo": "7",
+              "type": "Sri.K.Sudharani",
+              "description": "Assistant Professor -ECE",
+              "value": "Member",
+              "isLink": false
+            },
+            {
+              "idNo": "8",
+              "type": "Sri.K.Lalitha",
+              "description": "Assistant Professor -ECE",
+              "value": "Member",
+              "isLink": false
+            },
+            {
+              "idNo": "9",
+              "type": "Sri.M.Prasanna Kumar",
+              "description": "Assistant Professor -MBA",
+              "value": "Member",
+              "isLink": false
+            }
+          ]
+        }
+      ],
+      "images": [],
+      "customHeaders": [
+        "ID.No",
+        "Type",
+        "Description",
+        "Link / Description"
+      ]
     },
     {
       "id": "14",
       "title": "Admission Committee",
       "url": "#",
-      "categoryId": "cat-2"
+      "categoryId": "cat-2",
+      "sections": [
+        {
+          "id": "sec-1776071268498",
+          "title": "New Section",
+          "items": [
+            {
+              "idNo": "1",
+              "type": "Dr.M.Aravind Kumar",
+              "description": "Princpal",
+              "value": "Chairman",
+              "isLink": true
+            },
+            {
+              "idNo": "2",
+              "type": "Sri.L.Sankar",
+              "description": "Assistant Professor-ECE",
+              "value": "Member",
+              "isLink": true
+            },
+            {
+              "idNo": "3",
+              "type": "Sri.K.Muralidhar",
+              "description": "Assistant professor-ME",
+              "value": "Member",
+              "isLink": true
+            },
+            {
+              "idNo": "4",
+              "type": "Dr.P.Amaravathi",
+              "description": "Professor-CSE",
+              "value": "Member",
+              "isLink": true
+            },
+            {
+              "idNo": "5",
+              "type": "Smt.N.L.Tejaswani",
+              "description": "Assistant Professor-CSE-DS",
+              "value": "Member",
+              "isLink": true
+            },
+            {
+              "idNo": "6",
+              "type": "Sri.K.Jayarama Krishna",
+              "description": "Assistant Professor-H&S",
+              "value": "Member",
+              "isLink": true
+            },
+            {
+              "idNo": "7",
+              "type": "Dr.A.S.Prasad",
+              "description": "HOD-MBA",
+              "value": "Member",
+              "isLink": true
+            },
+            {
+              "idNo": "8",
+              "type": "Smt.B.Lavanya",
+              "description": "Assistant Professor-H&S",
+              "value": "Member",
+              "isLink": true
+            },
+            {
+              "idNo": "9",
+              "type": "Sri.K.Lalitha",
+              "description": "Assistant Professor-ECE",
+              "value": "Member",
+              "isLink": true
+            },
+            {
+              "idNo": "10",
+              "type": "Sri.B.Santhosh Kumar",
+              "description": "Assistant Professor-CSE",
+              "value": "Member",
+              "isLink": true
+            },
+            {
+              "idNo": "11",
+              "type": "Sri.N.Kondayya",
+              "description": "Assistant Professor-ME",
+              "value": "Member",
+              "isLink": true
+            },
+            {
+              "idNo": "12",
+              "type": "Sri.M.Prasanna Kumar",
+              "description": "Assistant professor-MBA",
+              "value": "Member",
+              "isLink": true
+            }
+          ]
+        }
+      ],
+      "images": [],
+      "customHeaders": [
+        "S.No",
+        "Member Name",
+        "Designation",
+        "Category/Position"
+      ]
     },
     {
       "id": "15",

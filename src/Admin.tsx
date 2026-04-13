@@ -328,8 +328,29 @@ export const Admin: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1.5">URL Target</label>
-                <input type="text" className="input-field font-mono text-sm" placeholder="https://" value={linkFormData.url} onChange={e => setLinkFormData({ ...linkFormData, url: e.target.value })} required />
+                <div className="flex justify-between items-end mb-1.5">
+                  <label className="block text-sm font-semibold text-gray-700">URL Target / Destination</label>
+                  <button 
+                    type="button"
+                    onClick={() => setLinkFormData({ ...linkFormData, url: '#' })}
+                    className="text-xs font-bold text-blue-600 hover:text-blue-800 bg-blue-50 px-2.5 py-1 rounded-md border border-blue-200 transition-colors"
+                  >
+                    + Use Inner Table Page
+                  </button>
+                </div>
+                <input 
+                  type="text" 
+                  className="input-field font-mono text-sm" 
+                  placeholder="https:// or paste /psychologist" 
+                  value={linkFormData.url} 
+                  onChange={e => setLinkFormData({ ...linkFormData, url: e.target.value })} 
+                  required 
+                />
+                {linkFormData.url === '#' && (
+                  <p className="text-xs text-green-600 mt-1 font-medium flex items-center gap-1">
+                    ✓ This will create an editable sub-page template!
+                  </p>
+                )}
               </div>
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1.5">Category Assignment</label>
