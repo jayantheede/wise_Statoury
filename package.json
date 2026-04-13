@@ -10,8 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "body-parser": "^2.2.2",
+    "cheerio": "^1.2.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
     "framer-motion": "^12.38.0",
     "lucide-react": "^1.7.0",
+    "mongoose": "^9.4.1",
+    "mysql2": "^3.22.0",
+    "puppeteer": "^24.40.0",
+    "puppeteer-core": "^24.40.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-router-dom": "^7.14.0"

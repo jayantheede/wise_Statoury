@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCMS } from './CMSContext';
 import { type StatutoryLink, type StatutoryCategory } from './data';
-import { LogOut, Plus, Edit2, Trash2, Home, X, FolderPlus, Settings, Upload, FileText } from 'lucide-react';
+import { LogOut, Plus, Edit2, Trash2, Home, X, FolderPlus, Settings, Upload, FileText, Newspaper, User } from 'lucide-react';
+import { ContentManager } from './ContentManager';
+import { AdminBlog } from './AdminBlog';
+import { AdminPsychologist } from './AdminPsychologist';
 
 export const Admin: React.FC = () => {
-  const { categories, links, addCategory, updateCategory, deleteCategory, addLink, updateLink, deleteLink, logout } = useCMS();
+  const { categories, links, addCategory, updateCategory, deleteCategory, addLink, updateLink, deleteLink, updateLinkSections, logout, heroImage, setHeroImage } = useCMS();
   const navigate = useNavigate();
   
   const [activeCategoryId, setActiveCategoryId] = useState<string>(categories[0]?.id || '');
@@ -15,6 +18,17 @@ export const Admin: React.FC = () => {
   const [editingLinkId, setEditingLinkId] = useState<string | null>(null);
   const [linkFormData, setLinkFormData] = useState({ title: '', url: '', categoryId: activeCategoryId });
   const [isUploading, setIsUploading] = useState(false);
+
+  const [activeTab, setActiveTab] = useState<'content' | 'blog' | 'psychologist'>('content');
+  const [managingLinkId, setManagingLinkId] = useState<string | null>(null);
+
+  const handleSaveSections = (data: { sections: StatutoryLink['sections'], images?: string[], customHeaders?: [string, string, string, string] }) => {
+    if (managingLinkId) {
+      updateLinkSections(managingLinkId, data.sections);
+      updateLink(managingLinkId, { images: data.images, customHeaders: data.customHeaders });
+      setManagingLinkId(null);
+    }
+  };
 
   const [isCatModalOpen, setIsCatModalOpen] = useState(false);
   const [editingCatId, setEditingCatId] = useState<string | null>(null);
@@ -115,6 +129,23 @@ export const Admin: React.FC = () => {
                 </div>
               </div>
             ))}
+
+            <button 
+              onClick={() => setActiveTab('blog')} 
+              className={`admin-nav-item mt-4 ${activeTab === 'blog' ? 'active bg-blue-50 text-blue-600 border-r-4 border-blue-500' : ''}`}
+            >
+              <Newspaper size={18} />
+              <span className="font-medium">Content Blog</span>
+            </button>
+
+            <button 
+              onClick={() => setActiveTab('psychologist')} 
+              className={`admin-nav-item mt-1 ${activeTab === 'psychologist' ? 'active bg-emerald-50 text-emerald-600 border-r-4 border-emerald-500' : ''}`}
+            >
+              <User size={18} />
+              <span className="font-medium">Psychologist Config</span>
+            </button>
+            
             {categories.length === 0 && (
               <p className="text-sm text-gray-400 px-2 italic mt-4 text-center">No categories yet.</p>
             )}
@@ -132,12 +163,45 @@ export const Admin: React.FC = () => {
       </aside>
 
       <main className="admin-main">
-        <div className="admin-topbar">
-          <h1 className="text-2xl font-bold tracking-tight">Dashboard Overview</h1>
+        <div className="admin-topbar flex justify-between items-center">
+          <div>
+            <h1 className="text-2xl font-bold tracking-tight">Dashboard Overview</h1>
+            <p className="text-sm text-gray-500 mt-1">Manage global configuration and contents</p>
+          </div>
+          <div className="flex items-center gap-4 bg-white p-2 rounded-lg border border-gray-100 shadow-sm">
+            <div className="h-10 w-24 rounded overflow-hidden border border-gray-200">
+              <img src={heroImage} alt="Global Hero Preview" className="h-full w-full object-cover" />
+            </div>
+            <div className="text-sm">
+              <label className="text-blue-600 hover:text-blue-700 font-medium cursor-pointer flex items-center gap-1">
+                <Upload size={14} /> Upload Hero
+                <input type="file" accept="image/*" className="hidden" onChange={(e) => {
+                  const f = e.target.files?.[0];
+                  if (f) {
+                    const r = new FileReader();
+                    r.onloadend = () => setHeroImage(r.result as string);
+                    r.readAsDataURL(f);
+                  }
+                }} />
+              </label>
+            </div>
+          </div>
         </div>
 
         <div className="admin-content">
-          {activeCategory ? (
+          {managingLinkId ? (
+            <ContentManager 
+              link={links.find(l => l.id === managingLinkId)!} 
+              onSave={handleSaveSections}
+              onCancel={() => setManagingLinkId(null)}
+            />
+          ) : activeTab === 'blog' ? (
+            <AdminBlog />
+          ) : activeTab === 'psychologist' ? (
+            <div className="max-w-5xl">
+              <AdminPsychologist />
+            </div>
+          ) : activeCategory ? (
             <>
               <div className="flex justify-between items-center mb-8">
                 <div>
@@ -166,10 +230,13 @@ export const Admin: React.FC = () => {
                         <td className="text-sm font-mono text-gray-500 bg-gray-50 rounded px-2 py-1 inline-block mt-2 mb-2">{link.url}</td>
                         <td style={{ textAlign: 'right' }}>
                           <div className="flex justify-end gap-2">
-                            <button onClick={() => openLinkModal(link)} className="action-btn shadow-sm border border-gray-200 bg-white hover:border-blue-300 hover:text-blue-600">
+                            <button onClick={() => setManagingLinkId(link.id)} className="action-btn shadow-sm border border-gray-200 bg-blue-50 text-blue-600 hover:border-blue-300 hover:bg-blue-100" title="Edit Inner Pages">
+                              <FileText size={16} />
+                            </button>
+                            <button onClick={() => openLinkModal(link)} className="action-btn shadow-sm border border-gray-200 bg-white hover:border-blue-300 hover:text-blue-600" title="Edit Link Properties">
                               <Edit2 size={16} />
                             </button>
-                            <button onClick={() => deleteLink(link.id)} className="action-btn shadow-sm border border-gray-200 bg-white hover:border-red-300 hover:text-red-500">
+                            <button onClick={() => deleteLink(link.id)} className="action-btn shadow-sm border border-gray-200 bg-white hover:border-red-300 hover:text-red-500" title="Delete Form">
                               <Trash2 size={16} />
                             </button>
                           </div>

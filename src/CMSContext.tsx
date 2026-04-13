@@ -1,73 +1,127 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { type StatutoryLink, type StatutoryCategory, initialData, initialCategories } from './data';
+import { type StatutoryLink, type StatutoryCategory, type BlogPost, type PsychologistInfo, initialData, initialCategories } from './data';
 
 interface CMSContextType {
   categories: StatutoryCategory[];
   links: StatutoryLink[];
+  blogs: BlogPost[];
   addCategory: (name: string) => void;
   updateCategory: (id: string, name: string) => void;
   deleteCategory: (id: string) => void;
   addLink: (link: Omit<StatutoryLink, 'id'>) => void;
-  updateLink: (id: string, updatedLink: Omit<StatutoryLink, 'id'>) => void;
+  updateLink: (id: string, updatedLink: Partial<StatutoryLink>) => void;
   deleteLink: (id: string) => void;
+  updateLinkSections: (id: string, sections: StatutoryLink['sections']) => void;
+  addBlog: (blog: Omit<BlogPost, 'id'>) => void;
+  updateBlog: (id: string, blog: Partial<BlogPost>) => void;
+  deleteBlog: (id: string) => void;
+  psychologist: PsychologistInfo;
+  updatePsychologist: (info: PsychologistInfo) => void;
   isAuthenticated: boolean;
   login: (password: string) => boolean;
   logout: () => void;
+  heroImage: string;
+  setHeroImage: (url: string) => void;
 }
 
 const CMSContext = createContext<CMSContextType | undefined>(undefined);
 
 export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [categories, setCategories] = useState<StatutoryCategory[]>(() => {
-    const saved = localStorage.getItem('vit_categories_v2');
-    if (saved) {
-      try { return JSON.parse(saved); } catch (e) { return initialCategories; }
-    }
-    return initialCategories;
+  const [loading, setLoading] = useState(true);
+  const [categories, setCategories] = useState<StatutoryCategory[]>(initialCategories);
+  const [links, setLinks] = useState<StatutoryLink[]>(initialData);
+  const [blogs, setBlogs] = useState<BlogPost[]>([]);
+  const [psychologist, setPsychologist] = useState<PsychologistInfo>({
+    name: 'Mr. Ram Prudhvy Teja',
+    designation: 'Sr. Psychologist',
+    qualifications: 'M.Sc. (Psychology),PG Diploma in Mental Health',
+    description: 'A psychologist studies human behavior and mental processes... They play a vital role...',
+    mou1Link: '#',
+    mou2Link: '#'
   });
-
-  const [links, setLinks] = useState<StatutoryLink[]>(() => {
-    const saved = localStorage.getItem('vit_links_v2');
-    if (saved) {
-      try { return JSON.parse(saved); } catch (e) { return initialData; }
-    }
-    return initialData;
-  });
+  const [heroImage, setHeroImage] = useState<string>('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2600&auto=format&fit=crop');
 
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {
     return localStorage.getItem('vit_auth') === 'true';
   });
 
-  useEffect(() => { localStorage.setItem('vit_categories_v2', JSON.stringify(categories)); }, [categories]);
-  useEffect(() => { localStorage.setItem('vit_links_v2', JSON.stringify(links)); }, [links]);
+  useEffect(() => {
+    fetch('/api/data')
+      .then(res => res.json())
+      .then(data => {
+        if (data.categories) setCategories(data.categories);
+        if (data.links) setLinks(data.links);
+        if (data.heroImage) setHeroImage(data.heroImage);
+        if (data.blogs) setBlogs(data.blogs);
+        if (data.psychologist) setPsychologist(data.psychologist);
+        setLoading(false);
+      })
+      .catch((e) => {
+        console.error('Failed to load from backend, using defaults', e);
+        setLoading(false);
+      });
+  }, []);
+
+  // Synchronize state to backend
+  useEffect(() => {
+    if (loading) return; // Don't persist initial render slate
+    fetch('/api/data', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ categories, links, heroImage, blogs, psychologist })
+    }).catch(console.error);
+  }, [categories, links, heroImage, blogs, psychologist, loading]);
+
   useEffect(() => { localStorage.setItem('vit_auth', isAuthenticated.toString()); }, [isAuthenticated]);
+
+  if (loading) {
+    return <div className="min-h-screen bg-[#151515] flex items-center justify-center text-white font-bold tracking-widest text-xl uppercase">Loading...</div>;
+  }
 
   const addCategory = (name: string) => {
     const newCategory: StatutoryCategory = { id: `cat-${Date.now()}`, name };
-    setCategories([...categories, newCategory]);
+    setCategories(prev => [...prev, newCategory]);
   };
 
   const updateCategory = (id: string, name: string) => {
-    setCategories(categories.map(c => c.id === id ? { ...c, name } : c));
+    setCategories(prev => prev.map(c => c.id === id ? { ...c, name } : c));
   };
 
   const deleteCategory = (id: string) => {
-    setCategories(categories.filter(c => c.id !== id));
-    setLinks(links.filter(l => l.categoryId !== id)); // cascades delete
+    setCategories(prev => prev.filter(c => c.id !== id));
+    setLinks(prev => prev.filter(l => l.categoryId !== id)); // cascades delete
   };
 
   const addLink = (link: Omit<StatutoryLink, 'id'>) => {
     const newLink = { ...link, id: `link-${Date.now()}` };
-    setLinks([...links, newLink]);
+    setLinks(prev => [...prev, newLink]);
   };
 
-  const updateLink = (id: string, updatedLink: Omit<StatutoryLink, 'id'>) => {
-    setLinks(links.map(l => l.id === id ? { ...l, ...updatedLink } : l));
+  const updateLink = (id: string, updatedLink: Partial<StatutoryLink>) => {
+    setLinks(prev => prev.map(l => l.id === id ? { ...l, ...updatedLink } : l));
+  };
+
+  const updateLinkSections = (id: string, sections: StatutoryLink['sections']) => {
+    setLinks(prev => prev.map(l => l.id === id ? { ...l, sections } : l));
   };
 
   const deleteLink = (id: string) => {
-    setLinks(links.filter(l => l.id !== id));
+    setLinks(prev => prev.filter(l => l.id !== id));
   };
+
+  const addBlog = (blog: Omit<BlogPost, 'id'>) => {
+    setBlogs(prev => [{ ...blog, id: `blog-${Date.now()}` }, ...prev]);
+  };
+
+  const updateBlog = (id: string, updatedBlog: Partial<BlogPost>) => {
+    setBlogs(prev => prev.map(b => b.id === id ? { ...b, ...updatedBlog } : b));
+  };
+
+  const deleteBlog = (id: string) => {
+    setBlogs(prev => prev.filter(b => b.id !== id));
+  };
+
+  const updatePsychologist = (info: PsychologistInfo) => setPsychologist(info);
 
   const login = (password: string) => {
     if (password === 'admin123') {
@@ -83,10 +137,13 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   return (
     <CMSContext.Provider value={{
-      categories, links, 
+      categories, links, blogs,
       addCategory, updateCategory, deleteCategory,
-      addLink, updateLink, deleteLink,
-      isAuthenticated, login, logout
+      addLink, updateLink, deleteLink, updateLinkSections,
+      addBlog, updateBlog, deleteBlog,
+      psychologist, updatePsychologist,
+      isAuthenticated, login, logout,
+      heroImage, setHeroImage
     }}>
       {children}
     </CMSContext.Provider>

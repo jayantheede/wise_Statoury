@@ -4,7 +4,10 @@ import { Portal } from './Portal';
 import { Admin } from './Admin';
 import { Login } from './Login';
 import { UploadSuccess } from './UploadSuccess';
+import { StatutoryDetail } from './StatutoryDetail';
 import { CMSProvider, useCMS } from './CMSContext';
+import { BlogPortal } from './BlogPortal';
+import { Psychologist } from './Psychologist';
 import './index.css';
 
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -18,6 +21,9 @@ const App: React.FC = () => {
       <Router>
         <Routes>
           <Route path="/" element={<Portal />} />
+          <Route path="/blog" element={<BlogPortal />} />
+          <Route path="/psychologist" element={<Psychologist />} />
+          <Route path="/statutory/:linkId" element={<StatutoryDetail />} />
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={
             <ProtectedRoute>
