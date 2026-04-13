@@ -1,4 +1,6 @@
 import { MongoClient } from 'mongodb';
+import fs from 'fs';
+import path from 'path';
 
 const uri = process.env.MONGO_URI || "mongodb+srv://edunexus03_db_user:1234567890@cluster0.kxw99mv.mongodb.net/edunexus?retryWrites=true&w=majority&appName=Cluster0";
 const client = new MongoClient(uri);
@@ -10,7 +12,21 @@ export default async function handler(req, res) {
     const collection = db.collection('portal_data');
 
     if (req.method === 'GET') {
-      const data = await collection.findOne({ _id: 'main' });
+      let data = await collection.findOne({ _id: 'main' });
+      
+      // Auto-seed from db.json if MongoDB is empty or has no categories
+      if (!data || !data.categories || data.categories.length === 0 || req.query.seed === 'true') {
+        try {
+          const raw = fs.readFileSync(path.join(process.cwd(), 'db.json'), 'utf8');
+          const parsed = JSON.parse(raw);
+          parsed._id = 'main';
+          await collection.updateOne({ _id: 'main' }, { $set: parsed }, { upsert: true });
+          data = parsed;
+        } catch(e) {
+          console.error("Seeding failed", e);
+        }
+      }
+
       if (data) {
         return res.status(200).json(data);
       } else {
