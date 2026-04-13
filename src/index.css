@@ -445,7 +445,10 @@ ul {
 .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
 .rounded { border-radius: 0.25rem; }
 .overflow-y-auto { overflow-y: auto; }
-
+.h-full { height: 100%; }
+.h-16 { height: 4rem; }
+.object-cover { object-fit: cover; }
+.object-contain { object-fit: contain; }
 /* Upload & Success Styling */
 .btn-outline {
   background: transparent;

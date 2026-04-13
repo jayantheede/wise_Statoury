@@ -75,7 +75,7 @@ export const StatutoryDetail: React.FC = () => {
                             <td className="py-4 px-6 text-sm text-gray-600">{item.description}</td>
                             <td className="py-4 px-6 text-sm text-gray-800">
                               {item.isImage ? (
-                                <img src={getResolvedImageUrl(item.value)} alt={item.type || 'Image'} className="h-16 object-contain" />
+                                <img src={getResolvedImageUrl(item.value)} alt={item.type || 'Image'} style={{ height: '80px', width: 'auto', objectFit: 'contain', maxWidth: '100%' }} />
                               ) : item.isLink ? (
                                 <a 
                                   href={item.value.startsWith('http') || item.value.startsWith('mailto:') || item.value.startsWith('tel:') || item.value.startsWith('data:') ? item.value : `https://${item.value}`} 
