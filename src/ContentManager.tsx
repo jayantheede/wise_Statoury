@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { type StatutoryLink } from './data';
-import { Plus, Trash2, X, Save, ArrowLeft, Upload, FileText } from 'lucide-react';
+import { Plus, Trash2, X, Save, ArrowLeft, Upload } from 'lucide-react';
 
 interface ContentManagerProps {
   link: StatutoryLink;

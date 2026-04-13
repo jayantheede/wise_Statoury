@@ -1,7 +1,7 @@
 import React from 'react';
 import { useCMS } from './CMSContext';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, User, FileText, Download, FileDown } from 'lucide-react';
+import { ArrowLeft, User, Download, FileDown } from 'lucide-react';
 
 export const Psychologist: React.FC = () => {
   const { heroImage, psychologist } = useCMS();
