@@ -43,7 +43,7 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [heroImage, setHeroImage] = useState<string>('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2600&auto=format&fit=crop');
 
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {
-    return localStorage.getItem('vit_auth') === 'true';
+    return localStorage.getItem('wise_auth') === 'true';
   });
 
   useEffect(() => {
@@ -80,7 +80,7 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     });
   }, [categories, links, heroImage, blogs, psychologist, loading]);
 
-  useEffect(() => { localStorage.setItem('vit_auth', isAuthenticated.toString()); }, [isAuthenticated]);
+  useEffect(() => { localStorage.setItem('wise_auth', isAuthenticated.toString()); }, [isAuthenticated]);
 
   if (loading) {
     return <div className="min-h-screen bg-[#151515] flex items-center justify-center text-white font-bold tracking-widest text-xl uppercase">Loading...</div>;
@@ -136,7 +136,7 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const updatePsychologist = (info: PsychologistInfo) => setPsychologist(info);
 
   const login = (password: string) => {
-    if (password === 'admin123') {
+    if (password === 'Admin@Wise#1') {
       setIsAuthenticated(true);
       return true;
     }

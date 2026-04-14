@@ -42,7 +42,7 @@ export const Login: React.FC = () => {
             <input 
               type="password" 
               className="input-field" 
-              placeholder="Password (admin123)"
+              placeholder="Password"
               value={password}
               onChange={(e) => { setPassword(e.target.value); setError(false); }}
               autoFocus
