@@ -7,10 +7,11 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: '50mb' }));
 
-const dbFile = path.join(__dirname, 'db.json');
+// 1. Serve static files FIRST with absolute paths
+const distPath = path.resolve(__dirname, 'dist');
+app.use(express.static(distPath));
 
-// Serve static files from the 'dist' directory
-app.use(express.static(path.join(__dirname, 'dist')));
+const dbFile = path.resolve(__dirname, 'db.json');
 
 app.get('/api/data', (req, res) => {
   try {

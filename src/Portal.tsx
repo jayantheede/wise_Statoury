@@ -17,7 +17,7 @@ export const Portal: React.FC = () => {
       <div className="statutory-hero" style={{ backgroundImage: `url(${useCMS().heroImage})` }}>
         <div className="hero-overlay"></div>
         <div className="hero-content flex flex-col items-center justify-center">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-widest uppercase">Statutory</h1>
+          <h1 className="text-4xl md:text-5xl font-bold tracking-widest uppercase" style={{ color: '#FFFFFF' }}>Statutory</h1>
           <p className="breadcrumbs mt-2 opacity-80 font-medium">Home &nbsp;&bull;&nbsp; Statutory</p>
         </div>
       </div>
