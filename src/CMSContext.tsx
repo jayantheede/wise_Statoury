@@ -75,14 +75,12 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       signal: controller.signal
     }).then(async res => {
       if (!res.ok) {
-        console.error("Save failed", await res.text());
-        // We only alert in admin mode now
-        if (window.location.pathname.includes('admin')) {
-          alert("Storage Warning: Data sync failed. Try reducing file sizes or using links.");
-        }
+        console.warn("Background Save Note: Partial sync failed (check file sizes).");
+      } else {
+        console.log("Data synced successfully.");
       }
     }).catch(e => {
-      if (e.name !== 'AbortError') console.error("Sync error", e);
+      if (e.name !== 'AbortError') console.error("Sync connection lost", e);
     });
 
     return () => controller.abort();
