@@ -32,20 +32,19 @@ app.get('/api/data', async (req, res) => {
   try {
     const col = await getCollection();
     
-    // Fetch all possible parts. Using regex to find all link chunks.
-    const parts = await col.find({ _id: { $in: ['categories', 'blogs', 'settings', 'main'], $regex: /^links_part_/ } }).toArray();
-    const dataMap = Object.fromEntries(parts.map(p => [p._id, p]));
+    // Fetch EVERYTHING in the collection
+    const allDocs = await col.find({}).toArray();
+    const dataMap = Object.fromEntries(allDocs.map(p => [p._id, p]));
 
-    // Reconstruct links from shards
-    const linkShards = parts.filter(p => String(p._id).startsWith('links_part_')).sort((a, b) => a._id.localeCompare(b._id));
-    const mergedLinks = linkShards.reduce((acc, shard) => acc.concat(shard.data || []), []);
-
+    // Reconstruct links from individual link docs
+    const individualLinks = allDocs.filter(p => String(p._id).startsWith('link_item_')).map(p => p.data);
+    
     let finalData = {};
 
-    if (dataMap.categories || mergedLinks.length > 0) {
+    if (dataMap.categories || individualLinks.length > 0) {
       finalData = {
         categories: dataMap.categories?.data || [],
-        links: mergedLinks.length > 0 ? mergedLinks : (dataMap.links?.data || []),
+        links: individualLinks.length > 0 ? individualLinks : (dataMap.links?.data || []),
         blogs: dataMap.blogs?.data || [],
         heroImage: dataMap.settings?.heroImage || '',
         psychologist: dataMap.settings?.psychologist || {}
@@ -71,35 +70,29 @@ app.post('/api/data', async (req, res) => {
     const { categories, links, blogs, heroImage, psychologist } = req.body;
     
     const size = Buffer.byteLength(JSON.stringify(req.body));
-    console.log(`Payload size: ${(size / 1024 / 1024).toFixed(2)} MB`);
+    console.log(`Incoming Total Payload: ${(size / 1024 / 1024).toFixed(2)} MB`);
 
-    // Chunk the links to stay well under the 16MB limit per doc
-    const chunkSize = 5; // Very safe chunk size
-    const linkChunks = [];
-    for (let i = 0; i < links.length; i += chunkSize) {
-      linkChunks.push(links.slice(i, i + chunkSize));
-    }
-
-    // Prepare operations
     const ops = [
       col.updateOne({ _id: 'categories' }, { $set: { data: categories } }, { upsert: true }),
       col.updateOne({ _id: 'blogs' }, { $set: { data: blogs } }, { upsert: true }),
       col.updateOne({ _id: 'settings' }, { $set: { heroImage, psychologist } }, { upsert: true })
     ];
 
-    // Clear old link parts before saving new ones (optional, or just overwrite)
-    await col.deleteMany({ _id: { $regex: /^links_part_/ } });
+    // 1. Wipe old individual links to ensure a fresh clean state
+    await col.deleteMany({ _id: { $regex: /^link_item_/ } });
 
-    // Add new link parts
-    linkChunks.forEach((chunk, index) => {
-      ops.push(col.updateOne({ _id: `links_part_${index}` }, { $set: { data: chunk } }, { upsert: true }));
+    // 2. Save EVERY link as its own individual document
+    links.forEach((link, index) => {
+      // Use the link's own ID or a generated index-based ID for storage
+      const storageId = `link_item_${link.id || index}`;
+      ops.push(col.updateOne({ _id: storageId }, { $set: { data: link } }, { upsert: true }));
     });
 
     await Promise.all(ops);
     res.json({ success: true });
   } catch(error) {
-    console.error("Save Error:", error);
-    res.status(500).json({ error: 'Save failed' });
+    console.error("Critical Save Error:", error);
+    res.status(500).json({ error: 'Database rejected the upload due to size.' });
   }
 });
 
@@ -108,4 +101,4 @@ app.use((req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT} with Auto-Sharding Engine`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT} with Individual-Link Persistence`));
