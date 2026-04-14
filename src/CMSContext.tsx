@@ -63,22 +63,30 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       });
   }, []);
 
-  // Synchronize state to backend
+  // Synchronize state to backend - ONLY if authenticated (Admin only)
   useEffect(() => {
-    if (loading) return; // Don't persist initial render slate
+    if (loading || !isAuthenticated) return; 
+    
+    const controller = new AbortController();
     fetch('/api/data', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ categories, links, heroImage, blogs, psychologist })
+      body: JSON.stringify({ categories, links, heroImage, blogs, psychologist }),
+      signal: controller.signal
     }).then(async res => {
       if (!res.ok) {
-        alert("Failed to save data permanently! The uploaded document might be too large.");
+        console.error("Save failed", await res.text());
+        // We only alert in admin mode now
+        if (window.location.pathname.includes('admin')) {
+          alert("Storage Warning: Data sync failed. Try reducing file sizes or using links.");
+        }
       }
     }).catch(e => {
-      console.error(e);
-      alert("Network error: Failed to save to the database.");
+      if (e.name !== 'AbortError') console.error("Sync error", e);
     });
-  }, [categories, links, heroImage, blogs, psychologist, loading]);
+
+    return () => controller.abort();
+  }, [categories, links, heroImage, blogs, psychologist, loading, isAuthenticated]);
 
   useEffect(() => { localStorage.setItem('wise_auth', isAuthenticated.toString()); }, [isAuthenticated]);
 
