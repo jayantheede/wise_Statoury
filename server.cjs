@@ -31,30 +31,50 @@ async function getCollection() {
 app.get('/api/data', async (req, res) => {
   try {
     const col = await getCollection();
-    
-    // Fetch EVERYTHING in the collection
     const allDocs = await col.find({}).toArray();
-    const dataMap = Object.fromEntries(allDocs.map(p => [p._id, p]));
-
-    // Reconstruct links from individual link docs
-    const individualLinks = allDocs.filter(p => String(p._id).startsWith('link_item_')).map(p => p.data);
     
-    let finalData = {};
+    // 1. Group shards by their base ID
+    const shards = {}; // { link_item_id: { 0: data, 1: data } }
+    const otherData = {};
 
-    if (dataMap.categories || individualLinks.length > 0) {
-      finalData = {
-        categories: dataMap.categories?.data || [],
-        links: individualLinks.length > 0 ? individualLinks : (dataMap.links?.data || []),
-        blogs: dataMap.blogs?.data || [],
-        heroImage: dataMap.settings?.heroImage || '',
-        psychologist: dataMap.settings?.psychologist || {}
-      };
-    } else if (dataMap.main) {
-      finalData = dataMap.main;
-    } else {
-      const dbFile = path.resolve(__dirname, 'db.json');
-      finalData = fs.existsSync(dbFile) ? JSON.parse(fs.readFileSync(dbFile, 'utf8')) : { categories: [], links: [] };
-    }
+    allDocs.forEach(doc => {
+      const id = String(doc._id);
+      if (id.startsWith('link_shard_')) {
+        const match = id.match(/^link_shard_(.+)_part_(\d+)$/);
+        if (match) {
+          const [_, baseId, partIndex] = match;
+          if (!shards[baseId]) shards[baseId] = {};
+          shards[baseId][partIndex] = doc.data;
+        }
+      } else {
+        otherData[id] = doc;
+      }
+    });
+
+    // 2. Reassemble sharded links
+    const reconstructedLinks = Object.keys(shards).map(baseId => {
+      const parts = shards[baseId];
+      const indices = Object.keys(parts).sort((a, b) => Number(a) - Number(b));
+      const fullData = indices.map(i => parts[i]).join('');
+      try {
+        return JSON.parse(fullData);
+      } catch (e) {
+        console.error("Failed to reassemble link", baseId);
+        return null;
+      }
+    }).filter(Boolean);
+
+    // 3. Fallback for non-sharded links (if any stay in old format)
+    const legacyLinks = allDocs.filter(p => String(p._id).startsWith('link_item_')).map(p => p.data);
+    const finalLinks = [...reconstructedLinks, ...legacyLinks];
+
+    const finalData = {
+      categories: otherData.categories?.data || [],
+      links: finalLinks,
+      blogs: otherData.blogs?.data || [],
+      heroImage: otherData.settings?.heroImage || '',
+      psychologist: otherData.settings?.psychologist || {}
+    };
 
     res.json(finalData);
   } catch(e) {
@@ -69,8 +89,7 @@ app.post('/api/data', async (req, res) => {
     const col = await getCollection();
     const { categories, links, blogs, heroImage, psychologist } = req.body;
     
-    const size = Buffer.byteLength(JSON.stringify(req.body));
-    console.log(`Incoming Total Payload: ${(size / 1024 / 1024).toFixed(2)} MB`);
+    console.log(`Incoming Total Payload Size: ${(Buffer.byteLength(JSON.stringify(req.body)) / 1024 / 1024).toFixed(2)} MB`);
 
     const ops = [
       col.updateOne({ _id: 'categories' }, { $set: { data: categories } }, { upsert: true }),
@@ -78,21 +97,30 @@ app.post('/api/data', async (req, res) => {
       col.updateOne({ _id: 'settings' }, { $set: { heroImage, psychologist } }, { upsert: true })
     ];
 
-    // 1. Wipe old individual links to ensure a fresh clean state
-    await col.deleteMany({ _id: { $regex: /^link_item_/ } });
+    // Wipe old sharded and non-sharded links
+    await col.deleteMany({ _id: { $regex: /^(link_shard_|link_item_)/ } });
 
-    // 2. Save EVERY link as its own individual document
-    links.forEach((link, index) => {
-      // Use the link's own ID or a generated index-based ID for storage
-      const storageId = `link_item_${link.id || index}`;
-      ops.push(col.updateOne({ _id: storageId }, { $set: { data: link } }, { upsert: true }));
-    });
+    // Shard each link individually
+    for (const link of links) {
+      const linkId = link.id || `l-${Math.random().toString(36).substr(2, 9)}`;
+      const serializedLink = JSON.stringify(link);
+      const chunkSize = 5 * 1024 * 1024; // 5MB safe chunks
+      
+      for (let i = 0, part = 0; i < serializedLink.length; i += chunkSize, part++) {
+        const chunk = serializedLink.substring(i, i + chunkSize);
+        ops.push(col.updateOne(
+          { _id: `link_shard_${linkId}_part_${part}` }, 
+          { $set: { data: chunk } }, 
+          { upsert: true }
+        ));
+      }
+    }
 
     await Promise.all(ops);
     res.json({ success: true });
   } catch(error) {
-    console.error("Critical Save Error:", error);
-    res.status(500).json({ error: 'Database rejected the upload due to size.' });
+    console.error("CRITICAL DATABASE ERROR:", error.message);
+    res.status(500).json({ error: error.message });
   }
 });
 
@@ -101,4 +129,4 @@ app.use((req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT} with Individual-Link Persistence`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT} with Deep-Binary-Sharding Engine`));
