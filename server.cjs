@@ -32,30 +32,29 @@ app.get('/api/data', async (req, res) => {
   try {
     const col = await getCollection();
     
-    // Fetch all parts
-    const parts = await col.find({ _id: { $in: ['categories', 'links', 'blogs', 'settings', 'main'] } }).toArray();
+    // Fetch all possible parts. Using regex to find all link chunks.
+    const parts = await col.find({ _id: { $in: ['categories', 'blogs', 'settings', 'main'], $regex: /^links_part_/ } }).toArray();
     const dataMap = Object.fromEntries(parts.map(p => [p._id, p]));
+
+    // Reconstruct links from shards
+    const linkShards = parts.filter(p => String(p._id).startsWith('links_part_')).sort((a, b) => a._id.localeCompare(b._id));
+    const mergedLinks = linkShards.reduce((acc, shard) => acc.concat(shard.data || []), []);
 
     let finalData = {};
 
-    // Check for new split format
-    if (dataMap.categories) {
+    if (dataMap.categories || mergedLinks.length > 0) {
       finalData = {
-        categories: dataMap.categories.data,
-        links: dataMap.links?.data || [],
+        categories: dataMap.categories?.data || [],
+        links: mergedLinks.length > 0 ? mergedLinks : (dataMap.links?.data || []),
         blogs: dataMap.blogs?.data || [],
         heroImage: dataMap.settings?.heroImage || '',
         psychologist: dataMap.settings?.psychologist || {}
       };
     } else if (dataMap.main) {
-      // Migrate from old format
       finalData = dataMap.main;
     } else {
-      // Force seed from db.json if everything is empty
       const dbFile = path.resolve(__dirname, 'db.json');
-      if (fs.existsSync(dbFile)) {
-        finalData = JSON.parse(fs.readFileSync(dbFile, 'utf8'));
-      }
+      finalData = fs.existsSync(dbFile) ? JSON.parse(fs.readFileSync(dbFile, 'utf8')) : { categories: [], links: [] };
     }
 
     res.json(finalData);
@@ -74,14 +73,29 @@ app.post('/api/data', async (req, res) => {
     const size = Buffer.byteLength(JSON.stringify(req.body));
     console.log(`Payload size: ${(size / 1024 / 1024).toFixed(2)} MB`);
 
-    // Save in parts to avoid 16MB MongoDB limit
-    await Promise.all([
+    // Chunk the links to stay well under the 16MB limit per doc
+    const chunkSize = 5; // Very safe chunk size
+    const linkChunks = [];
+    for (let i = 0; i < links.length; i += chunkSize) {
+      linkChunks.push(links.slice(i, i + chunkSize));
+    }
+
+    // Prepare operations
+    const ops = [
       col.updateOne({ _id: 'categories' }, { $set: { data: categories } }, { upsert: true }),
-      col.updateOne({ _id: 'links' }, { $set: { data: links } }, { upsert: true }),
       col.updateOne({ _id: 'blogs' }, { $set: { data: blogs } }, { upsert: true }),
       col.updateOne({ _id: 'settings' }, { $set: { heroImage, psychologist } }, { upsert: true })
-    ]);
+    ];
 
+    // Clear old link parts before saving new ones (optional, or just overwrite)
+    await col.deleteMany({ _id: { $regex: /^links_part_/ } });
+
+    // Add new link parts
+    linkChunks.forEach((chunk, index) => {
+      ops.push(col.updateOne({ _id: `links_part_${index}` }, { $set: { data: chunk } }, { upsert: true }));
+    });
+
+    await Promise.all(ops);
     res.json({ success: true });
   } catch(error) {
     console.error("Save Error:", error);
@@ -94,4 +108,4 @@ app.use((req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT} with Multi-Doc Persistence`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT} with Auto-Sharding Engine`));
