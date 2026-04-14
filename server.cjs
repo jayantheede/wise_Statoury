@@ -6,7 +6,7 @@ const { MongoClient } = require('mongodb');
 
 const app = express();
 app.use(cors());
-app.use(express.json({ limit: '50mb' }));
+app.use(express.json({ limit: '100mb' }));
 
 // 1. Serve static files FIRST with absolute paths
 const distPath = path.resolve(__dirname, 'dist');
@@ -51,6 +51,11 @@ app.get('/api/data', async (req, res) => {
 app.post('/api/data', async (req, res) => {
   try {
     const collection = await getCollection();
+    
+    // Log payload size for debugging
+    const size = Buffer.byteLength(JSON.stringify(req.body));
+    console.log(`Payload size: ${(size / 1024 / 1024).toFixed(2)} MB`);
+
     const payload = { ...req.body, _id: 'main' };
     await collection.updateOne({ _id: 'main' }, { $set: payload }, { upsert: true });
     res.json({ success: true });

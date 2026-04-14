@@ -58,7 +58,7 @@ export const Login: React.FC = () => {
           <p className="text-sm text-gray-500">
             {step === 'password' 
               ? 'Enter the administrator password to manage portal content.' 
-              : 'A 6-digit code has been sent to your registered device.'}
+              : <>A 6-digit code has been sent to <br/><strong className="text-blue-600">eedevnsskjayanth@gmail.com</strong></>}
           </p>
         </div>
 
