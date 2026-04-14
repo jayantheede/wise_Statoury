@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: '100mb' }));
 
-// 1. Serve static files FIRST with absolute paths
+// 1. Serve static files FIRST
 const distPath = path.resolve(__dirname, 'dist');
 app.use(express.static(distPath));
 
@@ -20,7 +20,6 @@ const client = new MongoClient(MONGO_URI, {
 });
 
 let dbConnection = null;
-
 async function getCollection() {
   if (!dbConnection) {
     await client.connect();
@@ -31,52 +30,58 @@ async function getCollection() {
 
 app.get('/api/data', async (req, res) => {
   try {
-    const collection = await getCollection();
-    let data = await collection.findOne({ _id: 'main' });
+    const col = await getCollection();
+    
+    // Fetch all parts
+    const parts = await col.find({ _id: { $in: ['categories', 'links', 'blogs', 'settings', 'main'] } }).toArray();
+    const dataMap = Object.fromEntries(parts.map(p => [p._id, p]));
 
-    // Force seed OR seed if empty
-    if (!data || !data.categories || req.query.seed === 'true') {
-      try {
-        const dbFile = path.resolve(__dirname, 'db.json');
-        if (fs.existsSync(dbFile)) {
-          const raw = fs.readFileSync(dbFile, 'utf8');
-          const seedData = JSON.parse(raw);
-          seedData._id = 'main';
-          await collection.updateOne({ _id: 'main' }, { $set: seedData }, { upsert: true });
-          data = seedData;
-          console.log("Database seeded from db.json successfully");
-        }
-      } catch (e) {
-        console.error("Seeding failed", e);
+    let finalData = {};
+
+    // Check for new split format
+    if (dataMap.categories) {
+      finalData = {
+        categories: dataMap.categories.data,
+        links: dataMap.links?.data || [],
+        blogs: dataMap.blogs?.data || [],
+        heroImage: dataMap.settings?.heroImage || '',
+        psychologist: dataMap.settings?.psychologist || {}
+      };
+    } else if (dataMap.main) {
+      // Migrate from old format
+      finalData = dataMap.main;
+    } else {
+      // Force seed from db.json if everything is empty
+      const dbFile = path.resolve(__dirname, 'db.json');
+      if (fs.existsSync(dbFile)) {
+        finalData = JSON.parse(fs.readFileSync(dbFile, 'utf8'));
       }
     }
-    
-    if (!data) {
-        return res.json({ categories: [], links: [], blogs: [], heroImage: '' });
-    }
 
-    res.json(data);
+    res.json(finalData);
   } catch(e) {
     console.error("Fetch Error:", e);
-    // Fallback to local db.json if MongoDB fails to load quickly
-    try {
-        const raw = fs.readFileSync(path.resolve(__dirname, 'db.json'), 'utf8');
-        res.json(JSON.parse(raw));
-    } catch(err) {
-        res.status(500).json({ error: 'Database connection failed' });
-    }
+    const dbFile = path.resolve(__dirname, 'db.json');
+    res.json(fs.existsSync(dbFile) ? JSON.parse(fs.readFileSync(dbFile, 'utf8')) : {});
   }
 });
 
 app.post('/api/data', async (req, res) => {
   try {
-    const collection = await getCollection();
+    const col = await getCollection();
+    const { categories, links, blogs, heroImage, psychologist } = req.body;
     
     const size = Buffer.byteLength(JSON.stringify(req.body));
     console.log(`Payload size: ${(size / 1024 / 1024).toFixed(2)} MB`);
 
-    const payload = { ...req.body, _id: 'main' };
-    await collection.updateOne({ _id: 'main' }, { $set: payload }, { upsert: true });
+    // Save in parts to avoid 16MB MongoDB limit
+    await Promise.all([
+      col.updateOne({ _id: 'categories' }, { $set: { data: categories } }, { upsert: true }),
+      col.updateOne({ _id: 'links' }, { $set: { data: links } }, { upsert: true }),
+      col.updateOne({ _id: 'blogs' }, { $set: { data: blogs } }, { upsert: true }),
+      col.updateOne({ _id: 'settings' }, { $set: { heroImage, psychologist } }, { upsert: true })
+    ]);
+
     res.json({ success: true });
   } catch(error) {
     console.error("Save Error:", error);
@@ -84,10 +89,9 @@ app.post('/api/data', async (req, res) => {
   }
 });
 
-// Fallback to index.html for SPA routing (Express 5 compatible)
 app.use((req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server listening on port ${PORT} with optimized MongoDB logic`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT} with Multi-Doc Persistence`));
