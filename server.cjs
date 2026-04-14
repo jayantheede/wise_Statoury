@@ -9,6 +9,9 @@ app.use(express.json({ limit: '50mb' }));
 
 const dbFile = path.join(__dirname, 'db.json');
 
+// Serve static files from the 'dist' directory
+app.use(express.static(path.join(__dirname, 'dist')));
+
 app.get('/api/data', (req, res) => {
   try {
     const data = fs.readFileSync(dbFile, 'utf8');
@@ -29,4 +32,10 @@ app.post('/api/data', (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log('Backend listening on port 3000 (Local JSON restored!)'));
+// Fallback to index.html for SPA routing
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
