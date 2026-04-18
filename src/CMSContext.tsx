@@ -63,11 +63,30 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       });
   };
 
+  // AUTO-SAVE: Automatically persist changes to backend whenever state updates
+  useEffect(() => {
+    if (loading) return; 
+
+    const saveData = async () => {
+      try {
+        const response = await fetch('/api/data', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ categories, links, blogs, heroImage, psychologist })
+        });
+        await response.json();
+        console.log('✓ CMS: Cloud Sync Successful');
+      } catch (err) {
+        console.error('✗ CMS Sync Failed:', err);
+      }
+    };
+
+    saveData();
+  }, [categories, links, blogs, heroImage, psychologist, loading]);
+
   useEffect(() => {
     fetchData();
-
-    // LIVE POLLING: Refresh every 30 seconds to show "Added Data" automatically
-    const pollInterval = setInterval(fetchData, 30000);
+    const pollInterval = setInterval(fetchData, 60000);
     return () => clearInterval(pollInterval);
   }, []);
 
