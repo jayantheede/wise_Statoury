@@ -130,7 +130,7 @@ export const Psychologist: React.FC = () => {
                 {[
                   { title: "Institutional MOU", phase: "Primary Accreditation", link: psychologist.mou1Link },
                   { title: "Community Support", phase: "Public Wellness Agreement", link: psychologist.mou2Link }
-                ].map((mou, i) => (
+                ].filter(mou => mou.link && mou.link !== '#').map((mou, i) => (
                   <div key={i} className="group relative">
                     <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl blur opacity-0 group-hover:opacity-20 transition duration-500" />
                     <div className="relative bg-[#0A0A0A] border border-white/5 group-hover:border-blue-500/50 rounded-3xl p-8 transition-all">
