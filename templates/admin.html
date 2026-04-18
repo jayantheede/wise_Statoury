@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS Dashboard - WISE Statutory</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Extra styles for Admin */
+        .admin-sidebar { height: 100vh; position: sticky; top: 0; }
+        .admin-nav-item.active { background: #eff6ff; color: #2563eb; font-weight: 600; }
+        .action-btn { background: white; border: 1px solid #e2e8f0; border-radius: 6px; padding: 6px; cursor: pointer; }
+        .action-btn:hover { background: #f8fafc; border-color: #cbd5e1; }
+        .btn-primary { background: #2563eb; color: white; padding: 10px 20px; border-radius: 8px; font-weight: 600; cursor: pointer; }
+        .btn-primary:hover { background: #1d4ed8; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="admin-wrapper" style="display: flex; min-height: 100vh;">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar" style="width: 280px; background: white; border-right: 1px solid #e2e8f0; display: flex; flex-direction: column;">
+            <div class="admin-brand" style="padding: 24px; border-bottom: 1px solid #f1f5f9; display: flex; align-items: center; gap: 10px;">
+                <div style="width: 32px; height: 32px; background: #2563eb; border-radius: 8px;"></div>
+                <h2 style="font-size: 20px; font-weight: 700; margin: 0;">WISE CMS</h2>
+            </div>
+            
+            <nav style="flex: 1; padding: 20px; overflow-y: auto;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                    <span style="font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px;">Categories</span>
+                    <button style="background: none; border: none; color: #64748b; cursor: pointer; font-size: 20px;">+</button>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; gap: 4px;">
+                    {% set active_cat_id = request.args.get('category', categories[0].id if categories else '') %}
+                    {% for cat in categories %}
+                        <a href="{{ url_for('admin', category=cat.id) }}" class="admin-nav-item {% if active_cat_id == cat.id %}active{% endif %}" style="text-decoration: none; padding: 12px; border-radius: 8px; color: #475569; display: block;">
+                            {{ cat.name }}
+                        </a>
+                    {% endfor %}
+                </div>
+            </nav>
+            
+            <div class="admin-footer" style="padding: 24px; border-top: 1px solid #f1f5f9;">
+                <a href="{{ url_for('index') }}" style="display: block; padding: 10px; color: #475569; text-decoration: none; font-weight: 500;">← Public Portal</a>
+                <a href="{{ url_for('logout') }}" style="display: block; padding: 10px; color: #ef4444; text-decoration: none; font-weight: 500; margin-top: 10px;">Logout</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main style="flex: 1; background: #f8fafc; padding: 40px; overflow-y: auto;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
+                <div>
+                    <h1 style="font-size: 28px; font-weight: 700; color: #0f172a; margin: 0;">Dashboard</h1>
+                    <p style="color: #64748b; margin-top: 5px;">Manage content for the portal</p>
+                </div>
+                
+                <div style="display: flex; align-items: center; gap: 15px; background: white; padding: 10px 20px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                    <img src="{{ heroImage }}" style="width: 60px; height: 35px; object-fit: cover; border-radius: 4px;">
+                    <span style="font-size: 14px; color: #2563eb; font-weight: 600; cursor: pointer;">Change Hero</span>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+                {% set active_cat = none %}
+                {% for cat in categories %}
+                    {% if cat.id == active_cat_id %}
+                        {% set active_cat = cat %}
+                    {% endif %}
+                {% endfor %}
+                
+                <h2 style="font-size: 20px; font-weight: 700; color: #334155;">{{ active_cat.name if active_cat else "Select Category" }}</h2>
+                <button class="btn-primary">+ Add New Link</button>
+            </div>
+
+            <div class="admin-card" style="background: white; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                    <thead>
+                        <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                            <th style="padding: 16px 24px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px;">Title</th>
+                            <th style="padding: 16px 24px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px;">URL Destination</th>
+                            <th style="padding: 16px 24px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; text-align: right;">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for link in links %}
+                            {% if link.categoryId == active_cat_id %}
+                                <tr style="border-bottom: 1px solid #f1f5f9;">
+                                    <td style="padding: 20px 24px; font-weight: 600; color: #0f172a;">{{ link.title }}</td>
+                                    <td style="padding: 20px 24px;">
+                                        <code style="background: #f1f5f9; padding: 4px 8px; border-radius: 4px; font-size: 12px; color: #64748b;">{{ link.url }}</code>
+                                    </td>
+                                    <td style="padding: 20px 24px; text-align: right;">
+                                        <button class="action-btn">Edit</button>
+                                        <button class="action-btn" style="color: #ef4444;">Delete</button>
+                                    </td>
+                                </tr>
+                            {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -5,7 +5,7 @@ async function scrapeCache() {
   const fetchUrl = (u) => fetch(u, { headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' } }).then(r => r.text());
   
   console.log('Fetching Google Cache for Mandatory Disclosure...');
-  const html = await fetchUrl('http://webcache.googleusercontent.com/search?q=cache:vishnu.edu.in/MandatoryDisclosure');
+  const html = await fetchUrl('http://webcache.googleusercontent.com/search?q=cache:wise.ac.in/MandatoryDisclosure');
   const $ = cheerio.load(html);
   
   const committees = [];
@@ -36,11 +36,11 @@ async function scrapeCache() {
   for (let i = 0; i < committees.length; i++) {
      const c = committees[i];
      if (c.title === 'Academic Council') continue; // Skip manually built
-     if (c.href.endsWith('.pdf')) continue; // Can't scrape internal PDFs easily via HTML DOM
+     if (c.href.endsWith('.pdf')) continue; 
      
      console.log(`Fetching members for ${c.title}...`);
      let targetUrl = c.href;
-     if (!targetUrl.startsWith('http')) targetUrl = 'https://vishnu.edu.in/' + targetUrl.replace(/^\//, '');
+     if (!targetUrl.startsWith('http')) targetUrl = 'https://wise.ac.in/' + targetUrl.replace(/^\//, '');
      
      const cacheUrl = `http://webcache.googleusercontent.com/search?q=cache:${targetUrl.replace('https://', '')}`;
      

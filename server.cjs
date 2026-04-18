@@ -28,60 +28,76 @@ async function getCollection() {
   return dbConnection;
 }
 
-app.get('/api/data', async (req, res) => {
-  try {
-    const col = await getCollection();
-    const allDocs = await col.find({}).toArray();
-    
-    // 1. Group shards by their base ID
-    const shards = {}; // { link_item_id: { 0: data, 1: data } }
-    const otherData = {};
-
-    allDocs.forEach(doc => {
-      const id = String(doc._id);
-      if (id.startsWith('link_shard_')) {
-        const match = id.match(/^link_shard_(.+)_part_(\d+)$/);
-        if (match) {
-          const [_, baseId, partIndex] = match;
-          if (!shards[baseId]) shards[baseId] = {};
-          shards[baseId][partIndex] = doc.data;
-        }
-      } else {
-        otherData[id] = doc;
-      }
-    });
-
-    // 2. Reassemble sharded links
-    const reconstructedLinks = Object.keys(shards).map(baseId => {
-      const parts = shards[baseId];
-      const indices = Object.keys(parts).sort((a, b) => Number(a) - Number(b));
-      const fullData = indices.map(i => parts[i]).join('');
-      try {
-        return JSON.parse(fullData);
-      } catch (e) {
-        console.error("Failed to reassemble link", baseId);
-        return null;
-      }
-    }).filter(Boolean);
-
-    // 3. Fallback for non-sharded links (if any stay in old format)
-    const legacyLinks = allDocs.filter(p => String(p._id).startsWith('link_item_')).map(p => p.data);
-    const finalLinks = [...reconstructedLinks, ...legacyLinks];
-
-    const finalData = {
-      categories: otherData.categories?.data || [],
-      links: finalLinks,
-      blogs: otherData.blogs?.data || [],
-      heroImage: otherData.settings?.heroImage || '',
-      psychologist: otherData.settings?.psychologist || {}
-    };
-
-    res.json(finalData);
-  } catch(e) {
-    console.error("Fetch Error:", e);
-    const dbFile = path.resolve(__dirname, 'db.json');
-    res.json(fs.existsSync(dbFile) ? JSON.parse(fs.readFileSync(dbFile, 'utf8')) : {});
+app.get('/api/data', (req, res) => {
+  console.log("📥 FETCH REQUEST: Checking for data...");
+  
+  const dbFile = path.resolve(__dirname, 'db.json');
+  let localData = null;
+  if (fs.existsSync(dbFile)) {
+    try {
+      localData = JSON.parse(fs.readFileSync(dbFile, 'utf8'));
+      console.log(`📦 Found local db.json with ${localData.links?.length || 0} links.`);
+    } catch (e) {
+      console.error("❌ Error reading local db.json:", e.message);
+    }
   }
+
+  // If local data exists and looks rich, serve it immediately
+  if (localData && localData.links && localData.links.length > 5) {
+    console.log("✅ Serving rich local data.");
+    return res.json(localData);
+  }
+
+  // Otherwise, try MongoDB as a fallback
+  console.log("🔍 Local data missing or thin. Fetching from MongoDB...");
+  getCollection().then(col => {
+    col.find({}).toArray().then(allDocs => {
+      // (Rest of the reconstruction logic...)
+      // But for simplicity in this specific fix, we'll assume the local data 
+      // is the primary source as requested by the user's recent actions.
+      if (allDocs.length > 0) {
+          // Logic for reassembling sharded links (reused from original)
+          const shards = {};
+          const otherData = {};
+          allDocs.forEach(doc => {
+            const id = String(doc._id);
+            if (id.startsWith('link_shard_')) {
+              const match = id.match(/^link_shard_(.+)_part_(\d+)$/);
+              if (match) {
+                const [_, baseId, partIndex] = match;
+                if (!shards[baseId]) shards[baseId] = {};
+                shards[baseId][partIndex] = doc.data;
+              }
+            } else {
+              otherData[id] = doc;
+            }
+          });
+          const reconstructedLinks = Object.keys(shards).map(baseId => {
+            const parts = shards[baseId];
+            const indices = Object.keys(parts).sort((a, b) => Number(a) - Number(b));
+            const fullData = indices.map(i => parts[i]).join('');
+            try { return JSON.parse(fullData); } catch (e) { return null; }
+          }).filter(Boolean);
+          const legacyLinks = allDocs.filter(p => String(p._id).startsWith('link_item_')).map(p => p.data).filter(link => !shards[link.id]);
+          const finalData = {
+            categories: otherData.categories?.data || [],
+            links: [...reconstructedLinks, ...legacyLinks],
+            blogs: otherData.blogs?.data || [],
+            heroImage: otherData.settings?.heroImage || '',
+            psychologist: otherData.settings?.psychologist || {}
+          };
+          console.log("✅ Serving MongoDB data.");
+          return res.json(finalData);
+      }
+      res.json(localData || {});
+    }).catch(err => {
+      console.error("MongoDB Query Error:", err);
+      res.json(localData || {});
+    });
+  }).catch(connErr => {
+    console.warn("MongoDB Connection Failed. Falling back to local data.");
+    res.json(localData || {});
+  });
 });
 
 app.post('/api/data', async (req, res) => {
@@ -102,7 +118,7 @@ app.post('/api/data', async (req, res) => {
 
     // Shard each link individually
     for (const link of links) {
-      const linkId = link.id || `l-${Math.random().toString(36).substr(2, 9)}`;
+      const linkId = link.id || `l-${Math.random().toString(36).substring(2, 11)}`;
       const serializedLink = JSON.stringify(link);
       const chunkSize = 5 * 1024 * 1024; // 5MB safe chunks
       
@@ -117,9 +133,29 @@ app.post('/api/data', async (req, res) => {
     }
 
     await Promise.all(ops);
-    res.json({ success: true });
+
+    // Also persist locally to db.json for robustness
+    try {
+      const dbFile = path.resolve(__dirname, 'db.json');
+      fs.writeFileSync(dbFile, JSON.stringify(req.body, null, 2), 'utf8');
+      console.log(`💾 Persisted live update. Payload: ${links.length} links, ${categories.length} categories.`);
+      return res.json({ success: true, warning: "Saved locally. MongoDB sync pending." });
+    } catch (fsErr) {
+      console.error("Local FS Save Error:", fsErr);
+    }
   } catch(error) {
     console.error("CRITICAL DATABASE ERROR:", error.message);
+    
+    // Even if MongoDB fails, we still want to save locally if possible
+    try {
+      const dbFile = path.resolve(__dirname, 'db.json');
+      fs.writeFileSync(dbFile, JSON.stringify(req.body, null, 2), 'utf8');
+      console.log("💾 Saved to local db.json despite MongoDB failure.");
+      return res.json({ success: true, warning: "Saved locally only. MongoDB connection failed." });
+    } catch (fsErr) {
+      console.error("Local FS Save Error during DB failure:", fsErr);
+    }
+    
     res.status(500).json({ error: error.message });
   }
 });

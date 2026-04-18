@@ -7,16 +7,26 @@ const LOCAL_DB = path.resolve(__dirname, 'db.json');
 async function pullData() {
   console.log("🚀 Starting data retrieval from Render...");
   
+  if (typeof fetch === 'undefined') {
+    console.error("❌ ERROR: 'fetch' is not defined. Please use Node.js v18 or later.");
+    return;
+  }
+
   try {
     const response = await fetch(RENDER_URL);
-    if (!response.ok) throw new Error(`Server responded with ${response.status}`);
+    if (!response.ok) {
+      if (response.status === 404) throw new Error("API endpoint not found on Render.");
+      if (response.status === 503) throw new Error("Render service is temporarily unavailable / sleeping.");
+      throw new Error(`Server responded with ${response.status}`);
+    }
     
     const data = await response.json();
     
     // Backup existing local data just in case
     if (fs.existsSync(LOCAL_DB)) {
-      fs.copyFileSync(LOCAL_DB, `${LOCAL_DB}.backup-${Date.now()}`);
-      console.log("📦 Created local backup of db.json");
+      const backupPath = `${LOCAL_DB}.backup-${new Date().toISOString().replace(/[:.]/g, '-')}`;
+      fs.copyFileSync(LOCAL_DB, backupPath);
+      console.log(`📦 Created local backup: ${path.basename(backupPath)}`);
     }
 
     // Save cloud data locally
@@ -27,7 +37,7 @@ async function pullData() {
     
   } catch (error) {
     console.error("❌ FAILED to retrieve data:", error.message);
-    console.log("Tip: Ensure your Render site is active and not in sleep mode.");
+    console.log("💡 Tip: Ensure your Render site is active and not in sleep mode at " + RENDER_URL);
   }
 }
 

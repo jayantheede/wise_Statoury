@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="row">
+    {% for category in categories %}
+    <div class="col-md-3">
+        <h4 class="statutory-heading">{{ category.name }}</h4>
+        <ul>
+            {% set category_links = [] %}
+            {% for link in links %}
+                {% if link.categoryId == category.id %}
+                    <li class="statutory-link-item">
+                        {% if link.url == '#' %}
+                            <a href="{{ url_for('statutory_detail', link_id=link.id) }}" class="statutory-link">{{ link.title }}</a>
+                        {% elif link.url.startswith('/') %}
+                            <a href="{{ link.url }}" class="statutory-link">{{ link.title }}</a>
+                        {% else %}
+                            <a href="{{ link.url if link.url.startswith('http') or link.url.startswith('mailto:') or link.url.startswith('tel:') else 'https://' ~ link.url }}" 
+                               class="statutory-link" target="_blank" rel="noopener noreferrer">
+                               {{ link.title }}
+                            </a>
+                        {% endif %}
+                    </li>
+                    {% set _ = category_links.append(link) %}
+                {% endif %}
+            {% endfor %}
+            {% if not category_links %}
+                <li class="statutory-link-item">
+                    <span style="color: #555; font-style: italic; font-size: 14px;">No items added</span>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+    {% endfor %}
+
+    <!-- Hardcoded Wellness & Support -->
+    <div class="col-md-3">
+        <h4 class="statutory-heading">Wellness & Support</h4>
+        <ul>
+            <li class="statutory-link-item">
+                <a href="{{ url_for('psychologist') }}" class="statutory-link">Campus Psychologist</a>
+            </li>
+            <li class="statutory-link-item">
+                <a href="{{ url_for('blog') }}" class="statutory-link">News & Updates</a>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

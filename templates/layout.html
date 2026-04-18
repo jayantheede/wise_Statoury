@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}WISE Statutory Portal{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div class="portal-wrapper relative">
+        <div class="admin-link-wrapper" style="z-index: 100; display: flex; gap: 10px;">
+            <a href="{{ url_for('psychologist') }}" class="admin-link" style="background: #10b981; padding: 5px 10px; border-radius: 4px; color: white;">Psychologist</a>
+            <a href="{{ url_for('blog') }}" class="admin-link" style="background: #3b82f6; padding: 5px 10px; border-radius: 4px; color: white;">Read Blog</a>
+            {% if session.authenticated %}
+                <a href="{{ url_for('admin') }}" class="admin-link" style="background: #6366f1; padding: 5px 10px; border-radius: 4px; color: white;">Dashboard</a>
+                <a href="{{ url_for('logout') }}" class="admin-link" style="background: #ef4444; padding: 5px 10px; border-radius: 4px; color: white;">Logout</a>
+            {% else %}
+                <a href="{{ url_for('login') }}" class="admin-link" style="padding: 5px 10px; border-radius: 4px;">Admin Access</a>
+            {% endif %}
+        </div>
+
+        <div class="statutory-hero" style="background-image: url('{{ heroImage }}')">
+            <div class="hero-overlay"></div>
+            <div class="hero-content flex flex-col items-center justify-center">
+                <h1 class="text-4xl md:text-5xl font-bold tracking-widest uppercase" style="color: #FFFFFF">Statutory</h1>
+                <p class="breadcrumbs mt-2 opacity-80 font-medium">Home &nbsp;&bull;&nbsp; Statutory</p>
+            </div>
+        </div>
+
+        <div class="container" style="position: relative; z-index: 10; margin-top: -50px; background: #151515; padding-top: 50px;">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

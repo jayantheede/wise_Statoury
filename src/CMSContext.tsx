@@ -46,7 +46,7 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     return localStorage.getItem('wise_auth') === 'true';
   });
 
-  useEffect(() => {
+  const fetchData = () => {
     fetch('/api/data')
       .then(res => res.json())
       .then(data => {
@@ -61,31 +61,17 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         console.error('Failed to load from backend, using defaults', e);
         setLoading(false);
       });
+  };
+
+  useEffect(() => {
+    fetchData();
+
+    // LIVE POLLING: Refresh every 30 seconds to show "Added Data" automatically
+    const pollInterval = setInterval(fetchData, 30000);
+    return () => clearInterval(pollInterval);
   }, []);
 
-  // Synchronize state to backend - ONLY if authenticated (Admin only)
-  useEffect(() => {
-    if (loading || !isAuthenticated) return; 
-    
-    const controller = new AbortController();
-    fetch('/api/data', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ categories, links, heroImage, blogs, psychologist }),
-      signal: controller.signal
-    }).then(async res => {
-      if (!res.ok) {
-        console.warn("Background Save Note: Partial sync failed (check file sizes).");
-      } else {
-        console.log("Data synced successfully.");
-      }
-    }).catch(e => {
-      if (e.name !== 'AbortError') console.error("Sync connection lost", e);
-    });
-
-    return () => controller.abort();
-  }, [categories, links, heroImage, blogs, psychologist, loading, isAuthenticated]);
-
+  // Autoload authentication on mount
   useEffect(() => { localStorage.setItem('wise_auth', isAuthenticated.toString()); }, [isAuthenticated]);
 
   if (loading) {

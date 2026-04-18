@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychologist - WISE Statutory</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="bg-gray-50">
+    <div class="portal-wrapper min-h-screen">
+        <header class="statutory-hero" style="height: 220px; background-image: url('{{ heroImage }}')">
+            <div class="hero-overlay"></div>
+            <div class="hero-content text-center flex flex-col items-center justify-center h-full">
+                <a href="{{ url_for('index') }}" class="flex items-center gap-2 text-white/80 hover:text-white transition-colors mb-4" style="color: white; font-weight: 600;">
+                    ← Back to Portal
+                </a>
+                <h1 class="text-4xl font-bold text-white uppercase tracking-wider flex items-center gap-3">
+                    Psychologist
+                </h1>
+                <div class="breadcrumbs mt-2 opacity-80" style="color: white;">Home / Psychologist</div>
+            </div>
+        </header>
+
+        <main class="container py-12 pb-32 max-w-6xl mx-auto px-4 md:px-8" style="background: transparent; margin-top: 0; padding-top: 40px;">
+            <div class="row" style="display: flex; flex-wrap: wrap; gap: 30px;">
+                
+                <div class="col-md-8 bg-white rounded-2xl shadow-sm border border-gray-100 p-8" style="flex: 2; min-width: 300px; background: white; border-radius: 16px; padding: 30px;">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-8 pb-4 border-b border-gray-100">Psychologist</h2>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold text-gray-800">{{ info.name }}</h3>
+                        <p class="text-gray-600 font-medium">{{ info.designation }}</p>
+                        <p class="text-gray-600">{{ info.qualifications }}</p>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-lg p-6 bg-gray-50/50 text-sm text-gray-700 leading-relaxed space-y-4" style="background: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0; line-height: 1.6;">
+                        {% for paragraph in info.description.split('\n') %}
+                            <p style="margin-bottom: 15px;">{{ paragraph }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="col-md-4 bg-white rounded-2xl shadow-sm border border-gray-100 p-8 h-max" style="flex: 1; min-width: 250px; background: white; border-radius: 16px; padding: 30px;">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-8 pb-4 border-b border-gray-100">MOU's</h2>
+                    
+                    <div class="border border-gray-200 rounded-lg overflow-hidden" style="border: 1px solid #e2e8f0; border-radius: 8px;">
+                        <table class="w-full text-left border-collapse" style="width: 100%;">
+                            <tbody>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors" style="border-bottom: 1px solid #e2e8f0;">
+                                    <td class="py-4 px-6 font-medium text-gray-800 border-r border-gray-200" style="padding: 15px; border-right: 1px solid #e2e8f0; font-weight: 600;">MOU-1</td>
+                                    <td class="py-4 px-6 text-center" style="padding: 15px; text-align: center;">
+                                        {% if info.mou1Link and info.mou1Link != '#' %}
+                                            <a href="{{ info.mou1Link }}" target="_blank" rel="noopener noreferrer" style="color: #ef4444; font-weight: bold; text-decoration: underline;">
+                                                Download
+                                            </a>
+                                        {% else %}
+                                            <span class="text-xs text-gray-400 font-medium italic">Not Available</span>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="py-4 px-6 font-medium text-gray-800 border-r border-gray-200" style="padding: 15px; border-right: 1px solid #e2e8f0; font-weight: 600;">MOU-2</td>
+                                    <td class="py-4 px-6 text-center" style="padding: 15px; text-align: center;">
+                                        {% if info.mou2Link and info.mou2Link != '#' %}
+                                            <a href="{{ info.mou2Link }}" target="_blank" rel="noopener noreferrer" style="color: #ef4444; font-weight: bold; text-decoration: underline;">
+                                                Download
+                                            </a>
+                                        {% else %}
+                                            <span class="text-xs text-gray-400 font-medium italic">Not Available</span>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

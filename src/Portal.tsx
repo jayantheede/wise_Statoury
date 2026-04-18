@@ -3,7 +3,7 @@ import { useCMS } from './CMSContext';
 import { Link } from 'react-router-dom';
 
 export const Portal: React.FC = () => {
-  const { categories, links } = useCMS();
+  const { categories, links, heroImage } = useCMS();
 
   return (
     <div className="portal-wrapper relative">
@@ -14,7 +14,7 @@ export const Portal: React.FC = () => {
       </div>
 
       {/* Exact Hero Header (Without Navigation Bar) */}
-      <div className="statutory-hero" style={{ backgroundImage: `url(${useCMS().heroImage})` }}>
+      <div className="statutory-hero" style={{ backgroundImage: `url(${heroImage})` }}>
         <div className="hero-overlay"></div>
         <div className="hero-content flex flex-col items-center justify-center">
           <h1 className="text-4xl md:text-5xl font-bold tracking-widest uppercase" style={{ color: '#FFFFFF' }}>Statutory</h1>
@@ -49,7 +49,7 @@ export const Portal: React.FC = () => {
                   ))}
                   {categoryLinks.length === 0 && (
                     <li className="statutory-link-item">
-                      <span style={{ color: '#555', fontStyle: 'italic', fontSize: '14px' }}>No items added</span>
+                      <span style={{ color: '#555', fontStyle: 'italic', fontSize: '14px' }}>Initializing...</span>
                     </li>
                   )}
                 </ul>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ link.title }} - WISE Statutory</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="bg-gray-50">
+    <div class="portal-wrapper min-h-screen">
+        <header class="statutory-hero" style="height: 220px; background-image: url('{{ heroImage }}')">
+            <div class="hero-overlay"></div>
+            <div class="hero-content text-center flex flex-col items-center justify-center">
+                <a href="{{ url_for('index') }}" class="flex items-center gap-2 text-white/80 hover:text-white transition-colors mb-4" style="color: white; font-weight: 600;">
+                    ← Back to Home
+                </a>
+                <h1 class="text-4xl font-bold text-white uppercase tracking-wider">{{ link.title }}</h1>
+                <div class="breadcrumbs mt-2 opacity-80" style="color: white;">Home / Statutory / {{ link.title }}</div>
+            </div>
+        </header>
+
+        <main class="container py-12" style="background: transparent; margin-top: 0; padding-top: 40px;">
+            <div class="max-w-5xl mx-auto">
+                {% if link.sections %}
+                    <div class="grid gap-8">
+                        {% for section in link.sections %}
+                            <section class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-8">
+                                <div class="bg-gray-800 px-8 py-4">
+                                    <h2 class="text-lg font-bold text-white uppercase tracking-wide">{{ section.title }}</h2>
+                                </div>
+                                <div class="p-0">
+                                    <table class="admin-table statutory-table w-full">
+                                        <thead>
+                                            <tr class="bg-gray-50 border-bottom border-gray-200">
+                                                {% set headers = link.customHeaders if link.customHeaders else ['ID.No', 'Type', 'Description', 'Link / Description'] %}
+                                                <th class="py-4 px-6 text-sm font-bold text-gray-700 w-20">{{ headers[0] }}</th>
+                                                <th class="py-4 px-6 text-sm font-bold text-gray-700 w-1/4">{{ headers[1] }}</th>
+                                                <th class="py-4 px-6 text-sm font-bold text-gray-700 w-1/4">{{ headers[2] }}</th>
+                                                <th class="py-4 px-6 text-sm font-bold text-gray-700">{{ headers[3] }}</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for item in section.items %}
+                                                <tr class="border-bottom border-gray-100 hover:bg-gray-50/50 transition-colors">
+                                                    <td class="py-4 px-6 text-sm text-gray-600">{{ item.idNo }}</td>
+                                                    <td class="py-4 px-6 text-sm text-gray-800 font-medium">{{ item.type }}</td>
+                                                    <td class="py-4 px-6 text-sm text-gray-600">{{ item.description }}</td>
+                                                    <td class="py-4 px-6 text-sm text-gray-800">
+                                                        {% if item.isImage %}
+                                                            <img src="{{ item.value }}" alt="{{ item.type }}" style="height: 80px; width: auto; object-fit: contain; max-width: 100%;">
+                                                        {% elif item.isLink %}
+                                                            {% if item.value is number or item.value.isdigit() %}
+                                                                <a href="{{ url_for('statutory_detail', link_id=item.value) }}" class="view-btn-green">View</a>
+                                                            {% elif item.value.startswith('/') %}
+                                                                <a href="{{ item.value }}" class="view-btn-green">View</a>
+                                                            {% else %}
+                                                                <a href="{{ item.value if item.value.startswith('http') or item.value.startswith('mailto:') or item.value.startswith('tel:') else 'https://' ~ item.value }}" 
+                                                                   target="_blank" rel="noopener noreferrer" class="view-btn-green">
+                                                                    View
+                                                                </a>
+                                                            {% endif %}
+                                                        {% else %}
+                                                            <span class="font-semibold">{{ item.value }}</span>
+                                                        {% endif %}
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                {% if link.images %}
+                    <div class="mt-12">
+                        <div class="bg-gray-800 px-8 py-4 rounded-t-2xl">
+                            <h2 class="text-lg font-bold text-white uppercase tracking-wide">Infrastructure / Gallery</h2>
+                        </div>
+                        <div class="bg-white p-6 rounded-b-2xl shadow-sm border border-gray-100">
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px;">
+                                {% for img in link.images %}
+                                    <div class="aspect-video rounded-xl overflow-hidden border border-gray-100 group relative">
+                                        <img src="{{ img }}" alt="Gallery" class="w-full h-full object-cover" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;">
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+
+                {% if not link.sections and not link.images %}
+                    <div class="text-center py-20 bg-white rounded-2xl shadow-sm border border-dashed border-gray-300">
+                        <h3 class="text-xl font-bold text-gray-800">No detailed sections available</h3>
+                        <p class="text-gray-500 mt-2">This link currently points directly to: </p>
+                        <a href="{{ link.url }}" class="text-blue-600 font-mono mt-2 inline-block break-all px-8">{{ link.url }}</a>
+                        <div class="mt-8">
+                            <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: #2563eb; color: white; padding: 10px 20px; border-radius: 8px;">
+                                Open Direct Link
+                            </a>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </main>
+
+        <footer class="py-12 text-center text-gray-400 text-sm border-t border-gray-200 bg-white mt-12">
+            <p>© 2026 West Godavari Institute of Science and Engineering. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

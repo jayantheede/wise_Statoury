@@ -207,7 +207,7 @@
               "idNo": "",
               "type": "",
               "description": "Mission",
-              "value": "provide student centric education and training on cutting\u2013edge technologies to make the students globally competitive and socially responsible citizens. M2:create an environment to strengthen the research , innovation and entrepreneurship to solve societal problems",
+              "value": "provide student centric education and training on cutting–edge technologies to make the students globally competitive and socially responsible citizens. M2:create an environment to strengthen the research , innovation and entrepreneurship to solve societal problems",
               "isLink": false
             },
             {
@@ -2126,7 +2126,7 @@
     },
     {
       "id": "10",
-      "title": "IQAC",
+      "title": "IQAC Committee",
       "url": "#",
       "categoryId": "cat-2",
       "customHeaders": [
@@ -2137,78 +2137,85 @@
       ],
       "sections": [
         {
-          "id": "sec-10",
-          "title": "IQAC Committee Members",
+          "id": "sec-iqac",
+          "title": "Internal Quality Assurance Cell (IQAC) Committee",
           "items": [
             {
               "idNo": "1",
-              "type": "Dr.M.Aravind Kumar",
+              "type": "Dr. M. Aravind Kumar",
               "description": "Principal",
               "value": "Chairman",
               "isLink": false
             },
             {
               "idNo": "2",
-              "type": "Sri.L.Sankar",
+              "type": "Sri. L. Sankar",
               "description": "HOD- ECE",
               "value": "IQAC Co-Ordinator",
               "isLink": false
             },
             {
               "idNo": "3",
-              "type": "Dr.A.S.Prasad",
+              "type": "Dr. A. S. Prasad",
               "description": "HOD-MBA",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "4",
-              "type": "Dr.P.Amaravathi",
+              "type": "Dr. P. Amaravathi",
               "description": "HOD-CSE",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "5",
-              "type": "Smt.N.L.Tejaswini",
+              "type": "Smt. N. L. Tejaswini",
               "description": "HOD-CSE-DS",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "6",
-              "type": "Sri.K.Muralidhar",
+              "type": "Sri. K. Muralidhar",
               "description": "HOD-MECH",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "7",
-              "type": "Sri.K.Jayarama Krishna",
+              "type": "Sri. K. Jayarama Krishna",
               "description": "HOD-H&S",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "8",
-              "type": "Sri.T.V.V.Anjaneyulu",
+              "type": "Sri. T. V. V. Anjaneyulu",
               "description": "Admin Officer",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "9",
-              "type": "Sri.P.Ganapathi Raju",
+              "type": "Sri. P. Ganapathi Raju",
               "description": "Industrialist",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "10",
-              "type": "Sri.N.Kondayya",
+              "type": "Sri. N. Kondayya",
               "description": "Alumni",
               "value": "Member",
               "isLink": false
+            },
+            {
+              "idNo": "11",
+              "type": "IQAC Dashboard",
+              "description": "Official Documentation",
+              "value": "https://docs.google.com/document/d/1TdLSNuCbJ3rwsibfoVtHerYDy9eAHpDO/edit",
+              "isLink": true
             }
           ]
         }
@@ -2221,8 +2228,8 @@
       "categoryId": "cat-2",
       "sections": [
         {
-          "id": "sec-11",
-          "title": "Planning and Evaluation Members",
+          "id": "sec-planning-eval",
+          "title": "Planning and Evaluation Committee",
           "items": [
             {
               "idNo": "1",
@@ -2234,20 +2241,20 @@
             {
               "idNo": "2",
               "type": "Smt.P.Sravani",
-              "description": "Controller of examination",
+              "description": "Controller of examination Asst.Prof.of H&S",
               "value": "Co-Ordinator",
               "isLink": false
             },
             {
               "idNo": "3",
               "type": "Sri.K.Muralidhar",
-              "description": "HOD-MECH",
+              "description": "Assistant Professor-MECH",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "4",
-              "type": "Sri.T.V.V.Anjaneyulu",
+              "type": "Sri.T.v.v.Anjaneyulu",
               "description": "Admin Officer",
               "value": "Member",
               "isLink": false
@@ -2276,43 +2283,50 @@
       "categoryId": "cat-2",
       "sections": [
         {
-          "id": "sec-12",
-          "title": "Grievance Redressal Members",
+          "id": "sec-grievance-members",
+          "title": "Grievance Redressal Committee",
           "items": [
             {
-              "idNo": "1",
-              "type": "Dr.M.Aravind Kumar",
+              "idNo": "1.",
+              "type": " Dr. M . Aravind Kumar",
               "description": "Principal",
               "value": "Chairman",
               "isLink": false
             },
             {
               "idNo": "2",
-              "type": "Dr.P.Amaravathi",
-              "description": "HOD-CSE",
+              "type": "Dr. P.Amaravathi",
+              "description": "Professor-CSE",
               "value": "Member Secretary",
               "isLink": false
             },
             {
               "idNo": "3",
-              "type": "Dr.A.S.Prasad",
-              "description": "HOD-MBA",
+              "type": "Dr. A .S . Prasad",
+              "description": "HOD -MBA",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "4",
-              "type": "Smt.N.L.Tejaswini",
-              "description": "HOD-CSE-DS",
+              "type": "Smt.N.L. Tejaswini",
+              "description": "Assistant Professor CSE DS",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "5",
-              "type": "Sri.N.Kondayya",
-              "description": "Assistant Professor - ME",
+              "type": "Sri.N.Kondayya ",
+              "description": "Assistant Professor ME",
               "value": "Member",
               "isLink": false
+            },
+            {
+              "idNo": "6",
+              "type": "Grievance Redressal Mechanism",
+              "description": "Official Documentation",
+              "value": "https://docs.google.com/document/d/1p9JJy7_W5iYBA3whq7lWsP1RdUwNqF0E/edit",
+              "isLink": true
             }
           ]
         }
@@ -2326,74 +2340,74 @@
     },
     {
       "id": "13",
-      "title": "Examination",
+      "title": "Examination Committee",
       "url": "#",
       "categoryId": "cat-2",
       "sections": [
         {
-          "id": "sec-13",
+          "id": "sec-examination",
           "title": "Examination Committee Members",
           "items": [
             {
-              "idNo": "1",
+              "idNo": "1.",
               "type": "Sri.K.Muralidhar",
-              "description": "HOD-MECH",
+              "description": "Assistant Professor -ME",
               "value": "Controller of examination",
               "isLink": false
             },
             {
               "idNo": "2",
               "type": "Smt.P.Sravani",
-              "description": "Assistant. Prof. of H&S",
-              "value": "Additional Controller of Examinations-I",
+              "description": "Assistant Professor -H&S",
+              "value": "Additional Controller of Examinations-1",
               "isLink": false
             },
             {
               "idNo": "3",
               "type": "Smt.B.Lavanya",
-              "description": "Assistant. Prof. of H&S",
-              "value": "Additional Controller of Examinations-II",
+              "description": "Assistant Professor -H&S",
+              "value": "Additional Controller of Examinations-11",
               "isLink": false
             },
             {
               "idNo": "4",
               "type": "Sri.N.Kondayya",
-              "description": "Assistant Professor - ME",
+              "description": "Assistant Professor -ME",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "5",
               "type": "Sri.A.Pavani",
-              "description": "Assistant Professor - CSE",
+              "description": "Assistant Professor -CSE",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "6",
-              "type": "Smt.N.L.Tejaswini",
-              "description": "HOD-CSE-DS",
+              "type": "Smt.N.L.Tejaswini ",
+              "description": "Assistant Professor -CSE-DS",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "7",
               "type": "Sri.K.Sudharani",
-              "description": "Assistant Professor - ECE",
+              "description": "Assistant Professor -ECE",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "8",
               "type": "Sri.K.Lalitha",
-              "description": "Assistant Professor - ECE",
+              "description": "Assistant Professor -ECE",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "9",
-              "type": "Sri M.Prasanna Kumar",
-              "description": "Assistant Professor - MBA",
+              "type": "Sri.M.Prasanna Kumar",
+              "description": "Assistant Professor -MBA",
               "value": "Member",
               "isLink": false
             }
@@ -2409,53 +2423,53 @@
     },
     {
       "id": "14",
-      "title": "Admission",
+      "title": "Admission Committee",
       "url": "#",
       "categoryId": "cat-2",
       "sections": [
         {
-          "id": "sec-14",
+          "id": "sec-admission",
           "title": "Admission Committee Members",
           "items": [
             {
               "idNo": "1",
               "type": "Dr.M.Aravind Kumar",
-              "description": "Principal",
+              "description": "Princpal",
               "value": "Chairman",
               "isLink": false
             },
             {
               "idNo": "2",
               "type": "Sri.L.Sankar",
-              "description": "HOD- ECE",
+              "description": "Assistant Professor-ECE",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "3",
               "type": "Sri.K.Muralidhar",
-              "description": "HOD-ME",
+              "description": "Assistant professor-ME",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "4",
               "type": "Dr.P.Amaravathi",
-              "description": "HOD-CSE",
+              "description": "Professor-CSE",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "5",
-              "type": "Smt.N.L.Tejaswini",
-              "description": "HOD-CSE-DS",
+              "type": "Smt.N.L.Tejaswani",
+              "description": "Assistant Professor-CSE-DS",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "6",
               "type": "Sri.K.Jayarama Krishna",
-              "description": "HOD-H&S",
+              "description": "Assistant Professor-H&S",
               "value": "Member",
               "isLink": false
             },
@@ -2469,35 +2483,35 @@
             {
               "idNo": "8",
               "type": "Smt.B.Lavanya",
-              "description": "Assistant Professor - H&S",
+              "description": "Assistant Professor-H&S",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "9",
               "type": "Sri.K.Lalitha",
-              "description": "Assistant Professor - ECE",
+              "description": "Assistant Professor-ECE",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "10",
               "type": "Sri.B.Santhosh Kumar",
-              "description": "Assistant Professor - CSE",
+              "description": "Assistant Professor-CSE",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "11",
               "type": "Sri.N.Kondayya",
-              "description": "Assistant Professor - ME",
+              "description": "Assistant Professor-ME",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "12",
               "type": "Sri.M.Prasanna Kumar",
-              "description": "Assistant Professor - MBA",
+              "description": "Assistant professor-MBA",
               "value": "Member",
               "isLink": false
             }
@@ -2575,73 +2589,9 @@
     },
     {
       "id": "16",
-      "title": "Student Welfare",
+      "title": "Student Welfare Committee",
       "url": "#",
-      "categoryId": "cat-2",
-      "sections": [
-        {
-          "id": "sec-16",
-          "title": "Student Welfare Members",
-          "items": [
-            {
-              "idNo": "1",
-              "type": "Dr. M. Aravind Kumar",
-              "description": "Principal",
-              "value": "Chairman",
-              "isLink": false
-            },
-            {
-              "idNo": "2",
-              "type": "Sri L. Sankar",
-              "description": "HOD-ECE",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "3",
-              "type": "Sri V. Sumanth",
-              "description": "Physical Director",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "4",
-              "type": "Ch. Raja sekhar",
-              "description": "Librarian",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "5",
-              "type": "Sri K. Muralidhar",
-              "description": "Coord. Student Affairs",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "6",
-              "type": "Sri K. Jayaramakrishna",
-              "description": "HOD-BS&H",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "7",
-              "type": "Sri V. Ramadevi",
-              "description": "Asst. Prof - MBA",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "8",
-              "type": "Sri N. Kondayya",
-              "description": "Asst. Prof - MECH",
-              "value": "Member",
-              "isLink": false
-            }
-          ]
-        }
-      ]
+      "categoryId": "cat-2"
     },
     {
       "id": "17",
@@ -2656,64 +2606,15 @@
       ],
       "sections": [
         {
-          "id": "sec-17",
-          "title": "Sexual Harassment Cell Members",
+          "id": "sec-icc",
+          "title": "Internal Complaints Committee (ICC)",
           "items": [
             {
               "idNo": "1",
-              "type": "Mr. K. Muralidhar",
-              "description": "Asst. Prof",
-              "value": "Presiding Officer",
-              "isLink": false
-            },
-            {
-              "idNo": "2",
-              "type": "Mrs. P. Sravani",
-              "description": "Asst. Prof",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "3",
-              "type": "Mrs. B. Lavanya",
-              "description": "Asst. Prof",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "4",
-              "type": "Mr. A. Raju Kumar",
-              "description": "Non-Teaching",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "5",
-              "type": "Mrs. K. Sudharani",
-              "description": "Asst. Prof",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "6",
-              "type": "Miss. P. Durga",
-              "description": "Student-CSE",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "7",
-              "type": "Miss. K. Deepthi",
-              "description": "Student-ECE",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "8",
-              "type": "Miss. M. Anitha",
-              "description": "Student-AI&DS",
-              "value": "Member",
-              "isLink": false
+              "type": "ICC Members",
+              "description": "Sexual Harassment Prevention",
+              "value": "https://docs.google.com/document/d/1a4e4pVCG09DmeNDJLxkISihLeHg6ibn-/edit",
+              "isLink": true
             }
           ]
         }
@@ -2721,7 +2622,7 @@
     },
     {
       "id": "18",
-      "title": "Anti-Ragging",
+      "title": "Anti-Ragging Committee",
       "url": "#",
       "categoryId": "cat-2",
       "customHeaders": [
@@ -2732,85 +2633,15 @@
       ],
       "sections": [
         {
-          "id": "sec-18",
-          "title": "Anti-Ragging Members",
+          "id": "sec-arc",
+          "title": "Anti-Ragging Committee",
           "items": [
             {
               "idNo": "1",
-              "type": "Dr. M. Aravind Kumar",
-              "description": "Principal",
-              "value": "Chairman",
-              "isLink": false
-            },
-            {
-              "idNo": "2",
-              "type": "Sri L. Sankar",
-              "description": "HOD-ECE",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "3",
-              "type": "Sri K. Muralidhar",
-              "description": "Coordinator",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "4",
-              "type": "Sri K. Jayarama Krishna",
-              "description": "HOD-BS&H",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "5",
-              "type": "Sri P. Prasad",
-              "description": "Parent Representative",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "6",
-              "type": "Sri P. Venkatesh",
-              "description": "Student-CSE",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "7",
-              "type": "Sri G. Sai",
-              "description": "Student-ECE",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "8",
-              "type": "Sri K. Rajesh",
-              "description": "Student-ME",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "9",
-              "type": "Sri M. Ramu",
-              "description": "Student-MBA",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "10",
-              "type": "Sri L. Durga",
-              "description": "Student-AI&DS",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "11",
-              "type": "Smt. B. Lavanya",
-              "description": "Asst. Prof - BS&H",
-              "value": "Member",
-              "isLink": false
+              "type": "Committee Members",
+              "description": "Anti-Ragging Measures",
+              "value": "https://docs.google.com/document/d/1rn7cweFBUXIxdw1WbcKSVej78gT1CRP1/edit",
+              "isLink": true
             }
           ]
         }
@@ -2818,104 +2649,33 @@
     },
     {
       "id": "19",
-      "title": "Research and",
+      "title": "Research and Development",
       "url": "#",
       "categoryId": "cat-2"
     },
     {
       "id": "19a",
-      "title": "Career Guidance",
+      "title": "Career Guidance Committee",
       "url": "#",
       "categoryId": "cat-2"
     },
     {
       "id": "19b",
-      "title": "Innovation and Entrepreneurship",
+      "title": "Innovation and Entrepreneurship Development",
       "url": "#",
       "categoryId": "cat-2"
     },
     {
       "id": "19c",
-      "title": "Institute Innovation",
+      "title": "Institute Innovation Council (IIC)",
       "url": "#",
       "categoryId": "cat-2"
     },
     {
       "id": "19d",
-      "title": "NSS",
+      "title": "NSS Committee",
       "url": "#",
-      "categoryId": "cat-2",
-      "sections": [
-        {
-          "id": "sec-19d",
-          "title": "NSS Committee Members",
-          "items": [
-            {
-              "idNo": "1",
-              "type": "Dr. M.Aravindkumar",
-              "description": "Principal",
-              "value": "Chairman",
-              "isLink": false
-            },
-            {
-              "idNo": "2",
-              "type": "Mr.K.Muralidhar",
-              "description": "Assoc. Prof. ME Dept.",
-              "value": "Coordinator",
-              "isLink": false
-            },
-            {
-              "idNo": "3",
-              "type": "Dr.A.S.Prasad",
-              "description": "Head of MBA Dept.",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "4",
-              "type": "Mr.N.Prasanna kumar",
-              "description": "Asst.Prof. MBA Dept",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "5",
-              "type": "Mr.M.Rajesh",
-              "description": "Asst.Prof. ECE Dept.",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "6",
-              "type": "Mr.N.Kondayya",
-              "description": "Asst.Prof. ME Dept",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "7",
-              "type": "Mr.K.Jayaramakrishna",
-              "description": "Assoc. Prof. S&H Dept.",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "8",
-              "type": "Mr.S.Rajeev",
-              "description": "Asst.Prof. CSE Dept",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "9",
-              "type": "Mr.N.Durgaprasad",
-              "description": "Student Volunteer, ECE",
-              "value": "Member",
-              "isLink": false
-            }
-          ]
-        }
-      ]
+      "categoryId": "cat-2"
     },
     {
       "id": "20",

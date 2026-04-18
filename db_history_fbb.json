@@ -207,7 +207,7 @@
               "idNo": "",
               "type": "",
               "description": "Mission",
-              "value": "provide student centric education and training on cutting\u2013edge technologies to make the students globally competitive and socially responsible citizens. M2:create an environment to strengthen the research , innovation and entrepreneurship to solve societal problems",
+              "value": "provide student centric education and training on cutting–edge technologies to make the students globally competitive and socially responsible citizens. M2:create an environment to strengthen the research , innovation and entrepreneurship to solve societal problems",
               "isLink": false
             },
             {
@@ -277,50 +277,50 @@
               "idNo": "",
               "type": "",
               "description": "Board of Studies-CE",
-              "value": "5",
-              "isLink": true
+              "value": "",
+              "isLink": false
             },
             {
               "idNo": "",
               "type": "",
               "description": "Board of Studies-ME",
-              "value": "5",
-              "isLink": true
+              "value": "",
+              "isLink": false
             },
             {
               "idNo": "",
               "type": "",
               "description": "Board of Studies-EEE",
-              "value": "5",
-              "isLink": true
+              "value": "",
+              "isLink": false
             },
             {
               "idNo": "",
               "type": "",
               "description": "Board of Studies-ECE",
-              "value": "5",
-              "isLink": true
+              "value": "",
+              "isLink": false
             },
             {
               "idNo": "",
               "type": "",
               "description": "Board of Studies-CSE",
-              "value": "5",
-              "isLink": true
+              "value": "",
+              "isLink": false
             },
             {
               "idNo": "",
               "type": "",
               "description": "Board of Studies-IT",
-              "value": "5",
-              "isLink": true
+              "value": "",
+              "isLink": false
             },
             {
               "idNo": "",
               "type": "",
               "description": "Board of Studies-BS",
-              "value": "5",
-              "isLink": true
+              "value": "",
+              "isLink": false
             },
             {
               "idNo": "2.4",
@@ -555,7 +555,7 @@
               "idNo": "4.3",
               "type": "Recruitment Policy and Process",
               "description": "Careers",
-              "value": "2",
+              "value": "https://docs.google.com/document/d/1q1x4gM5bz5EINxbTdofA3YtSoh6B8oU1/edit",
               "isLink": true
             },
             {
@@ -603,7 +603,7 @@
               "idNo": "5.1",
               "type": "Research Policy and Ethics",
               "description": "Research Policy",
-              "value": "2",
+              "value": "https://docs.google.com/document/d/1QDDHPGP2i-9tS5bR8NP7P08fC2c1Pf1t/edit",
               "isLink": true
             },
             {
@@ -714,7 +714,7 @@
               "idNo": "6.1",
               "type": "Admission Policy and Process",
               "description": "Admission Procedure",
-              "value": "2",
+              "value": "https://docs.google.com/document/d/14eTcQqoXWUbXkXgpdwG_NJFDljbiNB9S/edit ,  https://drive.google.com/file/d/1pybhn4R0tjU17nzwnmCMLUcdRyMyY24_/view   ,https://drive.google.com/file/d/1sK2smajO16nE8znOBnreA9wfWVrzA6Sp/view  ,  https://drive.google.com/file/d/1aVy8tYbGpegjKBDV3VZ4oIXklHg_D7TD/view",
               "isLink": true
             },
             {
@@ -763,7 +763,7 @@
               "idNo": "6.8",
               "type": "Anti-Ragging Measures",
               "description": "Anti-Ragging Measures",
-              "value": "18",
+              "value": "https://docs.google.com/document/d/1LE14hg6AFmyav6T5deil-bjQIuZspr7g/edit",
               "isLink": true
             },
             {
@@ -1257,78 +1257,7 @@
       "id": "2",
       "title": "Policies & Procedures",
       "url": "#",
-      "categoryId": "cat-1",
-      "customHeaders": [
-        "ID.No",
-        "Policy Name",
-        "Description",
-        "View Policy"
-      ],
-      "sections": [
-        {
-          "id": "sec-policies-1",
-          "title": "Institutional Policies",
-          "items": [
-            {
-              "idNo": "1",
-              "type": "H R Policy",
-              "description": "",
-              "value": "",
-              "isLink": true
-            },
-            {
-              "idNo": "2",
-              "type": "IT Policy",
-              "description": "",
-              "value": "",
-              "isLink": true
-            },
-            {
-              "idNo": "3",
-              "type": "Environmental Policy",
-              "description": "",
-              "value": "",
-              "isLink": true
-            },
-            {
-              "idNo": "4",
-              "type": "Disabled Friendly Policy",
-              "description": "",
-              "value": "",
-              "isLink": true
-            },
-            {
-              "idNo": "5",
-              "type": "E-Governance",
-              "description": "",
-              "value": "",
-              "isLink": true
-            },
-            {
-              "idNo": "6",
-              "type": "Scholarship Policy",
-              "description": "",
-              "value": "",
-              "isLink": true
-            },
-            {
-              "idNo": "7",
-              "type": "Research Policy",
-              "description": "",
-              "value": "",
-              "isLink": true
-            },
-            {
-              "idNo": "8",
-              "type": "Budget Policy",
-              "description": "",
-              "value": "",
-              "isLink": true
-            }
-          ]
-        }
-      ],
-      "images": []
+      "categoryId": "cat-1"
     },
     {
       "id": "3",
@@ -1378,91 +1307,91 @@
             {
               "idNo": "6.",
               "type": "Sri Ethakota Konda Babu",
-              "description": "Member",
+              "description": "",
               "value": "",
               "isLink": false
             },
             {
               "idNo": "7.",
               "type": "Sri Kollapureddy Venkata Rama Rao",
-              "description": "Member",
+              "description": "",
               "value": "",
               "isLink": false
             },
             {
               "idNo": "8.",
               "type": "Sri Gattim Manikyala Rao",
-              "description": "Member",
+              "description": "",
               "value": "",
               "isLink": false
             },
             {
               "idNo": "9.",
               "type": "Sri Nandhyala Satyanarayana",
-              "description": "Member",
+              "description": "",
               "value": "",
               "isLink": false
             },
             {
               "idNo": "10.",
               "type": "Sri Janga Surya Prakash Balaji",
-              "description": "Member",
+              "description": "",
               "value": "",
               "isLink": false
             },
             {
               "idNo": "11.",
               "type": "Sri Kola Venkata Raju",
-              "description": "Member",
+              "description": "",
               "value": "",
               "isLink": false
             },
             {
               "idNo": "12.",
               "type": "Sri Kalla Trimurthulu",
-              "description": "Member",
+              "description": "",
               "value": "",
               "isLink": false
             },
             {
               "idNo": "13.",
               "type": "Smt Pasupulate Rama Lakshmi",
-              "description": "Member",
+              "description": "",
               "value": "",
               "isLink": false
             },
             {
               "idNo": "14.",
               "type": "Sri Kollapureddy Phani Krishna",
-              "description": "Member",
+              "description": "",
               "value": "",
               "isLink": false
             },
             {
               "idNo": "15.",
               "type": "Dr Ethakota N.V.V. Satyanarayana",
-              "description": "Member",
+              "description": "",
               "value": "",
               "isLink": false
             },
             {
               "idNo": "16.",
               "type": "Sri Gattim Naveen Kishore",
-              "description": "Member",
+              "description": "",
               "value": "",
               "isLink": false
             },
             {
               "idNo": "17.",
               "type": "Sri Palnati sujith Sai",
-              "description": "Member",
+              "description": "",
               "value": "",
               "isLink": false
             },
             {
               "idNo": "18.",
               "type": "Sri Gajula Srimannarayana Murthy ",
-              "description": "Member",
+              "description": "",
               "value": "",
               "isLink": false
             }
@@ -1471,10 +1400,10 @@
       ],
       "images": [],
       "customHeaders": [
-        "S.No.",
+        "ID.No",
         "Member Name",
-        "Designation",
-        "Category/Position"
+        "Category",
+        "Link / Description"
       ]
     },
     {
@@ -1487,630 +1416,13 @@
       "id": "5",
       "title": "Board of Studies",
       "url": "#",
-      "categoryId": "cat-1",
-      "customHeaders": [
-        "S.No.",
-        "Member Name",
-        "Designation",
-        "Category/Position"
-      ],
-      "sections": [
-        {
-          "id": "bos-mech",
-          "title": "Board of Studies - Mechanical Engineering (ME)",
-          "items": [
-            {
-              "idNo": "1",
-              "type": "K. MURALIDHAR",
-              "description": "Asst. Professor & Head, Dept of ME",
-              "value": "Chairperson",
-              "isLink": false
-            },
-            {
-              "idNo": "2",
-              "type": "Dr. K. KRISHNA BHASKAR",
-              "description": "Asst. Professor, Dept of ME, JNTU Kakinada",
-              "value": "Member (University Nominee)",
-              "isLink": false
-            },
-            {
-              "idNo": "3",
-              "type": "Dr. S. RAJESH",
-              "description": "PROFESSOR IN THE DEPARTMENT OF MECHANICAL ENGINEERING  AND DEAN IQAC, SAGI RAMA KRISHNAM RAJU ENGINEERING COLLEGE (A)-B9, Bhimavaram",
-              "value": "Member (Subject experts from outside the parent University)",
-              "isLink": false
-            },
-            {
-              "idNo": "4",
-              "type": "Dr. SAMEER KUMAR DEVARAKONDA",
-              "description": "ASSOCIATE PROFESSOR QIS COLLEGE OF ENGINEERING AND TECHNOLOGY VENGAMUKKA PALEM , ONGOLE. ",
-              "value": "Member (Subject experts from outside the parent University)",
-              "isLink": false
-            },
-            {
-              "idNo": "5",
-              "type": "Dr.I.HARISH",
-              "description": "PROFESSOR & HOD DEPARTMENT OF MECHANICAL ENGINEERING, DNR COLLEGE OF ENGINEERING AND TECHNOLOGY (AUTONOMOUS) (A), Bhimavaram",
-              "value": "Member (Experts from outside the Autonomous College)",
-              "isLink": false
-            },
-            {
-              "idNo": "6",
-              "type": "GANAPATI RAJU PENMETSA",
-              "description": "Managing Director, SUN BIO MASS PRIVATE LIMITED  Yernagudem,Devarapalli",
-              "value": "Member (Industrial Expert)",
-              "isLink": false
-            },
-            {
-              "idNo": "7",
-              "type": "GOGULAMANDA VEERENDRA KUMAR ",
-              "description": "Assistant Professor  Department of Mechanical Engineering  Swarnandhra College of Engineering and Technology (AUTONOMOUS) Narasapur ",
-              "value": "Member (College alumni)",
-              "isLink": false
-            },
-            {
-              "idNo": "8",
-              "type": "N.KONDAYYA,",
-              "description": "Assistant Professor Department of Mechanical Engineering West GOdavari Institute of Science And Engineering (A) Prakasraopalem.)",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "9",
-              "type": "2.K.BHARATH KUMAR, Asst.Professor",
-              "description": "Assistant Professor Department of Mechanical Engineering West GOdavari Institute of Science And Engineering (A) Prakasraopalem.)",
-              "value": "Member",
-              "isLink": false
-            }
-          ]
-        },
-        {
-          "id": "bos-ece",
-          "title": "Board of Studies - Electronics & Communication Engineering (ECE)",
-          "items": [
-            {
-              "idNo": "1",
-              "type": "Dr. V. RAMA DEVI",
-              "description": "Asst. Professor & Head, Dept of ECE",
-              "value": "Chairperson",
-              "isLink": false
-            },
-            {
-              "idNo": "2",
-              "type": "Dr. Ch. Srinivasa Rao",
-              "description": "Professor & Principal, Dept of ECEUCEN, JNTUK",
-              "value": "Member (University Nominee)",
-              "isLink": false
-            },
-            {
-              "idNo": "3",
-              "type": "Dr. Srinivas Bachu",
-              "description": "Professor, Dept of ECE, Sri Indhu College",
-              "value": "Member (Subject Expert Support)",
-              "isLink": false
-            },
-            {
-              "idNo": "4",
-              "type": "Dr. Rangarao Orugu",
-              "description": "Assoc. Professor, Dept of ECE, VITB",
-              "value": "Member (Subject Expert Support)",
-              "isLink": false
-            },
-            {
-              "idNo": "5",
-              "type": "Dr. P. S. N. Murty",
-              "description": "Principal & Professor, Gonna Institute of IT",
-              "value": "Member (Expert from outside Autonomous College)",
-              "isLink": false
-            },
-            {
-              "idNo": "6",
-              "type": "GANAPATI RAJU PENMETSA",
-              "description": "Managing Director, SUN BIO MASS PRIVATE LIMITED",
-              "value": "Member (Industrial Expert)",
-              "isLink": false
-            },
-            {
-              "idNo": "7",
-              "type": "K. ANAND KUMAR",
-              "description": "Alumni Member (11PD1A0423)",
-              "value": "Member (College alumni)",
-              "isLink": false
-            },
-            {
-              "idNo": "8",
-              "type": "K. SUDHARANI",
-              "description": "Assistant Professor, WISE College",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "9",
-              "type": "K. LALITHA",
-              "description": "Assistant Professor, WISE College",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "10",
-              "type": "K. VEERANNA BABU",
-              "description": "Assistant Professor, WISE College",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "11",
-              "type": "N. KALPANA",
-              "description": "Assistant Professor, WISE College",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "12",
-              "type": "N. MADHAVI",
-              "description": "Assistant Professor, WISE College",
-              "value": "Member",
-              "isLink": false
-            }
-          ]
-        },
-        {
-          "id": "bos-cse",
-          "title": "Board of Studies - Computer Science & Engineering (CSE)",
-          "items": [
-            {
-              "idNo": "1",
-              "type": "Dr. P. Amaravathi",
-              "description": "Professor & HoD, Dept of CSE",
-              "value": "Chairperson",
-              "isLink": false
-            },
-            {
-              "idNo": "2",
-              "type": "Dr. O. Srinivasarao",
-              "description": "Professor & HoD, Dept of CSE, JNTU Kakinada",
-              "value": "Member (University Nominee)",
-              "isLink": false
-            },
-            {
-              "idNo": "3",
-              "type": "M. Srilakshmi",
-              "description": "Associate Professor, Dept of IT, SVECW, Bhimavaram",
-              "value": "Member (Subject Expert support from outside parent University)",
-              "isLink": false
-            },
-            {
-              "idNo": "4",
-              "type": "Dr. Kopparthi Suresh",
-              "description": "Principal & Professor, BIET, Bhimavaram",
-              "value": "Member (Subject Expert support from outside parent University)",
-              "isLink": false
-            },
-            {
-              "idNo": "5",
-              "type": "Dr. M. Prasad",
-              "description": "Professor, Dept of CSE, SVECW, Bhimavaram",
-              "value": "Member (Expert from outside the Autonomous College)",
-              "isLink": false
-            },
-            {
-              "idNo": "6",
-              "type": "RajKumar Bonagiri",
-              "description": "Managing Director, BlackBucks Private Limited",
-              "value": "Member (Industrial Expert)",
-              "isLink": false
-            },
-            {
-              "idNo": "7",
-              "type": "Peddireddy Sowndarya",
-              "description": "Software IT Employee",
-              "value": "Member (College alumni)",
-              "isLink": false
-            }
-          ]
-        },
-        {
-          "id": "bos-it",
-          "title": "Board of Studies - MBA",
-          "items": [
-            {
-              "idNo": "1",
-              "type": "Dr. A.S.PRASAD",
-              "description": "Professor & Head Department of management studies",
-              "value": "Chair Person",
-              "isLink": false
-            },
-            {
-              "idNo": "2",
-              "type": "Dr. K.KALYAN       CHAKRAVARTHY ",
-              "description": "Professor,  Department of management studies Rajiv Gandhi University of Knowledge Technologies RK Valley , YSR kadapa",
-              "value": "Member Subject Expert",
-              "isLink": false
-            },
-            {
-              "idNo": "3",
-              "type": " Dr. R.PARDHASARADHI ",
-              "description": "Professor, Department of management studies Dr. C S Rao  PG Centre, Sri . Y.N COLLEGE Narsapur",
-              "value": "Member Subject Expert",
-              "isLink": false
-            },
-            {
-              "idNo": "4",
-              "type": "Dr. P.UMAMAHESWARI DEVI",
-              "description": "Professor,    Department of management studies AKNU , Rajamahendravaram",
-              "value": " Member        (University Nominee)",
-              "isLink": false
-            },
-            {
-              "idNo": "5",
-              "type": "Dr. K.GANGA RAJU",
-              "description": "Associate Professor, Department of CSBS         Vishnu institute of  technology . Bhimavaram",
-              "value": "Member Subject Expert",
-              "isLink": false
-            },
-            {
-              "idNo": "6",
-              "type": " Sri. P .GANAPATI RAJU",
-              "description": "MD SUN BIO MASS PRIVATE LIMITED, SURYANARAYANAPURAM",
-              "value": "Member Industry Expert",
-              "isLink": false
-            },
-            {
-              "idNo": "7",
-              "type": "Ms. T.PAVANI SANDHYA",
-              "description": "(ROLLNO: 19PD1E0055)                 2019-21 BATCH",
-              "value": "  Member Alumni",
-              "isLink": false
-            },
-            {
-              "idNo": "8",
-              "type": "Mr. M. PRASANNA KUMAR",
-              "description": "Assistant Professor     W.I.S.E",
-              "value": "  Member",
-              "isLink": false
-            },
-            {
-              "idNo": "9",
-              "type": "Ms. N. DEVI SIREESHA",
-              "description": "Assistant Professor            W.I.S.E ",
-              "value": "  Member",
-              "isLink": false
-            },
-            {
-              "idNo": "10",
-              "type": "Ms. A.VIJAYASIRI",
-              "description": "Assistant Professor            W.I.S.E",
-              "value": "  Member",
-              "isLink": false
-            },
-            {
-              "idNo": "11",
-              "type": "Ms. U.JHANSI RANI",
-              "description": "Assistant Professor           W.I.S.E",
-              "value": "  Member",
-              "isLink": false
-            }
-          ]
-        },
-        {
-          "id": "bos-english",
-          "title": "Board of Studies - Basic Sciences (BS) (English)",
-          "items": [
-            {
-              "idNo": "1",
-              "type": "Dr A. S. PRASAD",
-              "description": "Professor & Head, Dept of BS&H",
-              "value": "Chairperson",
-              "isLink": false
-            },
-            {
-              "idNo": "2",
-              "type": "Dr G G Ratnam",
-              "description": "Professor & HOD, Dept of BSH, DNRCET, Bhimavaram",
-              "value": "Member (Subject Expert Support outside parent University)",
-              "isLink": false
-            },
-            {
-              "idNo": "3",
-              "type": "Dr. Sunkara Alivelu Mangatayaru",
-              "description": "Associate Professor of English, Dept of BS&H, BIET, Pennada",
-              "value": "Member (Subject Expert Support outside parent University)",
-              "isLink": false
-            },
-            {
-              "idNo": "4",
-              "type": "Dr. K. Sree Ramesh",
-              "description": "Professor, Dept of English, Adikavi Nannaya University",
-              "value": "Member (University Nominee)",
-              "isLink": false
-            },
-            {
-              "idNo": "5",
-              "type": "Dr. A. Chiranjeeva Rao",
-              "description": "Assoc. Professor of English, WISE",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "6",
-              "type": "Mr. B. S. R. S. Siva kumar",
-              "description": "Assoc. Professor of English, WISE",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "7",
-              "type": "Dr. P. Sampath Kumar",
-              "description": "Asst. Professor of English, WISE",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "8",
-              "type": "Sri Ganapathi raju Penmethsa",
-              "description": "Managing Director, Sun Bio Mass Private Limited",
-              "value": "Member (Industrial Expert)",
-              "isLink": false
-            }
-          ]
-        },
-        {
-          "id": "sec-1776408258490",
-          "title": "Board of Studies - Basic Sciences (BS) (Mathametics)",
-          "items": [
-            {
-              "idNo": "1",
-              "type": "Dr A.s.Prasad",
-              "description": "Professor & Head,Dept of BS&H",
-              "value": "chairperson",
-              "isLink": false
-            },
-            {
-              "idNo": "2",
-              "type": "Dr V.Ravindranath",
-              "description": "Professor & Head Department of Mathematics JNTUK KAKINADA",
-              "value": "Member(University Nominee)",
-              "isLink": false
-            },
-            {
-              "idNo": "3",
-              "type": "Dr K.V.Anand",
-              "description": "Rtd.Principal and HOD MVNJS&RVR College of Arts and Science Malkipuram ",
-              "value": "Member(Subject expert)",
-              "isLink": false
-            },
-            {
-              "idNo": "4",
-              "type": "Dr V.Ramachandram",
-              "description": "Professor Dept of Mathematics ISTS engineering colloge Rajamahendravaram",
-              "value": "Member(subject expert)",
-              "isLink": false
-            },
-            {
-              "idNo": "5",
-              "type": "Sri.T.Srinivasa Rao",
-              "description": "Asst.Prof.Adikavi Nannaya University Rajamahendravaram",
-              "value": "Member(Subject expert)",
-              "isLink": false
-            },
-            {
-              "idNo": "6",
-              "type": "Sri.K.Jaya Rama Krishna",
-              "description": "Asst.Prof.WISE Engineering college,Prakasaraopalem",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "7",
-              "type": "Mrs.B.Lavanya",
-              "description": "Asst.Prof.WISE Engineering college, Prakasaraopalem",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "8",
-              "type": "Miss.P.Sravani",
-              "description": "Asst. Prof. WISE Engineering college, Prakasaraopalem",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "9",
-              "type": "Mrs.P.Sirisha",
-              "description": "Asst. Prof. WISE Engineering college, Prakasaraopalem",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "10",
-              "type": "Ganapathi Raju Penmethsa",
-              "description": "Managing director Sun Bio Mass Private Limited Yarnagudem,Devarapalli.",
-              "value": "Member(Indusrial Expert)",
-              "isLink": false
-            },
-            {
-              "idNo": "11",
-              "type": "P.Sowndarya",
-              "description": "Roll no:20PD!",
-              "value": "",
-              "isLink": false
-            }
-          ]
-        },
-        {
-          "id": "bos-physics",
-          "title": "Board of Studies - Basic Sciences (Physics)",
-          "items": [
-            {
-              "idNo": "1",
-              "type": "Dr.A.S.Prasad",
-              "description": "Associate professor & H.O.D",
-              "value": "Chairperson",
-              "isLink": false
-            },
-            {
-              "idNo": "2",
-              "type": "Dr.G.Padmaja Rani",
-              "description": "Professor, Dept of Physics, JNTUK",
-              "value": "Member (Expert from Parent University)",
-              "isLink": false
-            },
-            {
-              "idNo": "3",
-              "type": "Dr.A.Veeraiah",
-              "description": "Dept of Physics, DNR College, Bhimavaram",
-              "value": "Member (External Expert)",
-              "isLink": false
-            },
-            {
-              "idNo": "4",
-              "type": "Dr.Kurella Bhaskar Rao",
-              "description": "Dean-Academics, Bhimavaram Institute of Engineering and Technology",
-              "value": "Member (Subject Expert from outside Parent University)",
-              "isLink": false
-            },
-            {
-              "idNo": "5",
-              "type": "Dr. Rajesh Yadav Mudi",
-              "description": "Associate Professor of Physics, Dept of Basic Science, Vishnu Institute of Technology, Bhimavaram",
-              "value": "Member (Subject Expert from outside Parent University)",
-              "isLink": false
-            },
-            {
-              "idNo": "6",
-              "type": "Sri.Ganapathi raju Penmethsa",
-              "description": "Managing director, Sun Bio Mass Private Limited, Yarnagudem",
-              "value": "Member (Industrial Expert)",
-              "isLink": false
-            },
-            {
-              "idNo": "7",
-              "type": "Sowndarya Peddireddy",
-              "description": "Roll no: 20PD1A0545, Batch: 2020-2024",
-              "value": "Member (College Alumni)",
-              "isLink": false
-            }
-          ]
-        },
-        {
-          "id": "bos-chemistry",
-          "title": "Board of Studies - Basic Sciences (Chemistry)",
-          "items": [
-            {
-              "idNo": "1",
-              "type": "Dr.A.S.Prasad",
-              "description": "Head of the Department BS&H",
-              "value": "Chairperson",
-              "isLink": false
-            },
-            {
-              "idNo": "2",
-              "type": "Dr. S. Satya Veni",
-              "description": "Assoc. Professor, Dept of Chemistry, JNTU Kakinada",
-              "value": "Member (University Nominee)",
-              "isLink": false
-            },
-            {
-              "idNo": "3",
-              "type": "Prof. B. Jagan Mohan Reddy",
-              "description": "Professor, Chemistry, AKNU Rajamahendravaram",
-              "value": "Member (External Expert)",
-              "isLink": false
-            },
-            {
-              "idNo": "4",
-              "type": "K. A. S. V. R. Sai Phani Kumar",
-              "description": "Asst. Professor, Dept of Chemistry, DNRCET Bhimavaram",
-              "value": "Member (External Expert)",
-              "isLink": false
-            },
-            {
-              "idNo": "5",
-              "type": "Dr. T.V.L. Balaji Gupta",
-              "description": "Assoc. Professor, Dept of Basic Science, VITB",
-              "value": "Member (External Expert)",
-              "isLink": false
-            },
-            {
-              "idNo": "6",
-              "type": "Sri Ganapati Raju Penmetsa",
-              "description": "Managing Director, Sun Bio Mass Pvt.Ltd",
-              "value": "Member (Industrial Expert)",
-              "isLink": false
-            },
-            {
-              "idNo": "7",
-              "type": "Sowndarya Peddireddy",
-              "description": "Software Developer",
-              "value": "Member (College alumni)",
-              "isLink": false
-            },
-            {
-              "idNo": "8",
-              "type": "I. B. Narayudu",
-              "description": "Asst.Professor, WISE",
-              "value": "Member (Faculty)",
-              "isLink": false
-            },
-            {
-              "idNo": "9",
-              "type": "Smt K. Sandhya Rani",
-              "description": "Asst.Professor, WISE",
-              "value": "Member (Faculty)",
-              "isLink": false
-            },
-            {
-              "idNo": "10",
-              "type": "Smt M. Rani",
-              "description": "Asst.Professor, WISE",
-              "value": "Member (Faculty)",
-              "isLink": false
-            }
-          ]
-        }
-      ],
-      "images": []
+      "categoryId": "cat-1"
     },
     {
       "id": "6",
       "title": "Finance Committee",
       "url": "#",
-      "categoryId": "cat-1",
-      "sections": [
-        {
-          "id": "finance-members",
-          "title": "Finance Committee Members",
-          "items": [
-            {
-              "idNo": "1",
-              "type": "Dr. M. Aravind Kumar",
-              "description": "Principal",
-              "value": "Chairperson",
-              "isLink": false
-            },
-            {
-              "idNo": "2",
-              "type": "T. Anjaneyulu",
-              "description": "Member",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "3",
-              "type": "K. Muralidhar",
-              "description": "Member",
-              "value": "Member",
-              "isLink": false
-            }
-          ]
-        }
-      ],
-      "customHeaders": [
-        "S.No.",
-        "Member Name",
-        "Designation",
-        "Category/Position"
-      ]
+      "categoryId": "cat-1"
     },
     {
       "id": "7",
@@ -2126,92 +1438,16 @@
     },
     {
       "id": "10",
-      "title": "IQAC",
+      "title": "IQAC Committee",
       "url": "#",
       "categoryId": "cat-2",
+      "sections": [],
+      "images": [],
       "customHeaders": [
-        "S.No.",
-        "Member Name",
-        "Designation",
-        "Category/Position"
-      ],
-      "sections": [
-        {
-          "id": "sec-10",
-          "title": "IQAC Committee Members",
-          "items": [
-            {
-              "idNo": "1",
-              "type": "Dr.M.Aravind Kumar",
-              "description": "Principal",
-              "value": "Chairman",
-              "isLink": false
-            },
-            {
-              "idNo": "2",
-              "type": "Sri.L.Sankar",
-              "description": "HOD- ECE",
-              "value": "IQAC Co-Ordinator",
-              "isLink": false
-            },
-            {
-              "idNo": "3",
-              "type": "Dr.A.S.Prasad",
-              "description": "HOD-MBA",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "4",
-              "type": "Dr.P.Amaravathi",
-              "description": "HOD-CSE",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "5",
-              "type": "Smt.N.L.Tejaswini",
-              "description": "HOD-CSE-DS",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "6",
-              "type": "Sri.K.Muralidhar",
-              "description": "HOD-MECH",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "7",
-              "type": "Sri.K.Jayarama Krishna",
-              "description": "HOD-H&S",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "8",
-              "type": "Sri.T.V.V.Anjaneyulu",
-              "description": "Admin Officer",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "9",
-              "type": "Sri.P.Ganapathi Raju",
-              "description": "Industrialist",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "10",
-              "type": "Sri.N.Kondayya",
-              "description": "Alumni",
-              "value": "Member",
-              "isLink": false
-            }
-          ]
-        }
+        "",
+        "",
+        "",
+        ""
       ]
     },
     {
@@ -2221,8 +1457,8 @@
       "categoryId": "cat-2",
       "sections": [
         {
-          "id": "sec-11",
-          "title": "Planning and Evaluation Members",
+          "id": "sec-1776072066098",
+          "title": "New Section",
           "items": [
             {
               "idNo": "1",
@@ -2234,20 +1470,20 @@
             {
               "idNo": "2",
               "type": "Smt.P.Sravani",
-              "description": "Controller of examination",
+              "description": "Controller of examination Asst.Prof.of H&S",
               "value": "Co-Ordinator",
               "isLink": false
             },
             {
               "idNo": "3",
               "type": "Sri.K.Muralidhar",
-              "description": "HOD-MECH",
+              "description": "Assistant Professor-MECH",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "4",
-              "type": "Sri.T.V.V.Anjaneyulu",
+              "type": "Sri.T.v.v.Anjaneyulu",
               "description": "Admin Officer",
               "value": "Member",
               "isLink": false
@@ -2262,6 +1498,7 @@
           ]
         }
       ],
+      "images": [],
       "customHeaders": [
         " S.No.",
         "Member Name",
@@ -2276,47 +1513,48 @@
       "categoryId": "cat-2",
       "sections": [
         {
-          "id": "sec-12",
-          "title": "Grievance Redressal Members",
+          "id": "sec-1776056442117",
+          "title": "New Section",
           "items": [
             {
-              "idNo": "1",
-              "type": "Dr.M.Aravind Kumar",
+              "idNo": "1.",
+              "type": " Dr. M . Aravind Kumar",
               "description": "Principal",
               "value": "Chairman",
               "isLink": false
             },
             {
               "idNo": "2",
-              "type": "Dr.P.Amaravathi",
-              "description": "HOD-CSE",
+              "type": "Dr. P.Amaravathi",
+              "description": "Professor-CSE",
               "value": "Member Secretary",
               "isLink": false
             },
             {
               "idNo": "3",
-              "type": "Dr.A.S.Prasad",
-              "description": "HOD-MBA",
+              "type": "Dr. A .S . Prasad",
+              "description": "HOD -MBA",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "4",
-              "type": "Smt.N.L.Tejaswini",
-              "description": "HOD-CSE-DS",
+              "type": "Smt.N.L. Tejaswini",
+              "description": "Assistant Professor CSE DS",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "5",
-              "type": "Sri.N.Kondayya",
-              "description": "Assistant Professor - ME",
+              "type": "Sri.N.Kondayya ",
+              "description": "Assistant Professor ME",
               "value": "Member",
               "isLink": false
             }
           ]
         }
       ],
+      "images": [],
       "customHeaders": [
         " S.No",
         "Member Name",
@@ -2326,184 +1564,186 @@
     },
     {
       "id": "13",
-      "title": "Examination",
+      "title": "Examination Committee",
       "url": "#",
       "categoryId": "cat-2",
       "sections": [
         {
-          "id": "sec-13",
-          "title": "Examination Committee Members",
+          "id": "sec-1776072807266",
+          "title": "New Section",
           "items": [
             {
-              "idNo": "1",
+              "idNo": "1.",
               "type": "Sri.K.Muralidhar",
-              "description": "HOD-MECH",
+              "description": "Assistant Professor -ME",
               "value": "Controller of examination",
               "isLink": false
             },
             {
               "idNo": "2",
               "type": "Smt.P.Sravani",
-              "description": "Assistant. Prof. of H&S",
-              "value": "Additional Controller of Examinations-I",
+              "description": "Assistant Professor -H&S",
+              "value": "Additional Controller of Examinations-1",
               "isLink": false
             },
             {
               "idNo": "3",
               "type": "Smt.B.Lavanya",
-              "description": "Assistant. Prof. of H&S",
-              "value": "Additional Controller of Examinations-II",
+              "description": "Assistant Professor -H&S",
+              "value": "Additional Controller of Examinations-11",
               "isLink": false
             },
             {
               "idNo": "4",
               "type": "Sri.N.Kondayya",
-              "description": "Assistant Professor - ME",
+              "description": "Assistant Professor -ME",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "5",
               "type": "Sri.A.Pavani",
-              "description": "Assistant Professor - CSE",
+              "description": "Assistant Professor -CSE",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "6",
-              "type": "Smt.N.L.Tejaswini",
-              "description": "HOD-CSE-DS",
+              "type": "Smt.N.L.Tejaswini ",
+              "description": "Assistant Professor -CSE-DS",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "7",
               "type": "Sri.K.Sudharani",
-              "description": "Assistant Professor - ECE",
+              "description": "Assistant Professor -ECE",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "8",
               "type": "Sri.K.Lalitha",
-              "description": "Assistant Professor - ECE",
+              "description": "Assistant Professor -ECE",
               "value": "Member",
               "isLink": false
             },
             {
               "idNo": "9",
-              "type": "Sri M.Prasanna Kumar",
-              "description": "Assistant Professor - MBA",
+              "type": "Sri.M.Prasanna Kumar",
+              "description": "Assistant Professor -MBA",
               "value": "Member",
               "isLink": false
             }
           ]
         }
       ],
+      "images": [],
       "customHeaders": [
-        "S.No.",
-        "Member Name",
-        "Designation",
-        "Category/Position"
+        "ID.No",
+        "Type",
+        "Description",
+        "Link / Description"
       ]
     },
     {
       "id": "14",
-      "title": "Admission",
+      "title": "Admission Committee",
       "url": "#",
       "categoryId": "cat-2",
       "sections": [
         {
-          "id": "sec-14",
-          "title": "Admission Committee Members",
+          "id": "sec-1776071268498",
+          "title": "New Section",
           "items": [
             {
               "idNo": "1",
               "type": "Dr.M.Aravind Kumar",
-              "description": "Principal",
+              "description": "Princpal",
               "value": "Chairman",
-              "isLink": false
+              "isLink": true
             },
             {
               "idNo": "2",
               "type": "Sri.L.Sankar",
-              "description": "HOD- ECE",
+              "description": "Assistant Professor-ECE",
               "value": "Member",
-              "isLink": false
+              "isLink": true
             },
             {
               "idNo": "3",
               "type": "Sri.K.Muralidhar",
-              "description": "HOD-ME",
+              "description": "Assistant professor-ME",
               "value": "Member",
-              "isLink": false
+              "isLink": true
             },
             {
               "idNo": "4",
               "type": "Dr.P.Amaravathi",
-              "description": "HOD-CSE",
+              "description": "Professor-CSE",
               "value": "Member",
-              "isLink": false
+              "isLink": true
             },
             {
               "idNo": "5",
-              "type": "Smt.N.L.Tejaswini",
-              "description": "HOD-CSE-DS",
+              "type": "Smt.N.L.Tejaswani",
+              "description": "Assistant Professor-CSE-DS",
               "value": "Member",
-              "isLink": false
+              "isLink": true
             },
             {
               "idNo": "6",
               "type": "Sri.K.Jayarama Krishna",
-              "description": "HOD-H&S",
+              "description": "Assistant Professor-H&S",
               "value": "Member",
-              "isLink": false
+              "isLink": true
             },
             {
               "idNo": "7",
               "type": "Dr.A.S.Prasad",
               "description": "HOD-MBA",
               "value": "Member",
-              "isLink": false
+              "isLink": true
             },
             {
               "idNo": "8",
               "type": "Smt.B.Lavanya",
-              "description": "Assistant Professor - H&S",
+              "description": "Assistant Professor-H&S",
               "value": "Member",
-              "isLink": false
+              "isLink": true
             },
             {
               "idNo": "9",
               "type": "Sri.K.Lalitha",
-              "description": "Assistant Professor - ECE",
+              "description": "Assistant Professor-ECE",
               "value": "Member",
-              "isLink": false
+              "isLink": true
             },
             {
               "idNo": "10",
               "type": "Sri.B.Santhosh Kumar",
-              "description": "Assistant Professor - CSE",
+              "description": "Assistant Professor-CSE",
               "value": "Member",
-              "isLink": false
+              "isLink": true
             },
             {
               "idNo": "11",
               "type": "Sri.N.Kondayya",
-              "description": "Assistant Professor - ME",
+              "description": "Assistant Professor-ME",
               "value": "Member",
-              "isLink": false
+              "isLink": true
             },
             {
               "idNo": "12",
               "type": "Sri.M.Prasanna Kumar",
-              "description": "Assistant Professor - MBA",
+              "description": "Assistant professor-MBA",
               "value": "Member",
-              "isLink": false
+              "isLink": true
             }
           ]
         }
       ],
+      "images": [],
       "customHeaders": [
         "S.No",
         "Member Name",
@@ -2512,410 +1752,58 @@
       ]
     },
     {
-      "id": "bos-civil-details",
-      "title": "Board of Studies - Civil Engineering",
+      "id": "15",
+      "title": "Library Committee",
       "url": "#",
-      "categoryId": "cat-inner-md",
-      "sections": [
-        {
-          "id": "sec-bos-civil",
-          "title": "BoS Members - Civil Engineering",
-          "items": [
-            {
-              "idNo": "1",
-              "type": "Dr. Pala Gireesh Kumar",
-              "description": "Professor & HOD, SVECW",
-              "value": "Chairman",
-              "isLink": false
-            },
-            {
-              "idNo": "2",
-              "type": "Dr. M. Swaroopa Rani",
-              "description": "Professor, Dept. of Civil Engineering, JNTUK",
-              "value": "University Nominee",
-              "isLink": false
-            },
-            {
-              "idNo": "3",
-              "type": "Dr. D.S.R. Murthy",
-              "description": "Professor, Dept. of Civil Engineering, Andhra University",
-              "value": "Subject Expert",
-              "isLink": false
-            },
-            {
-              "idNo": "4",
-              "type": "Dr. D. Rama Seshu",
-              "description": "Professor, Dept. of Civil Engineering, NIT Warangal",
-              "value": "Subject Expert",
-              "isLink": false
-            },
-            {
-              "idNo": "5",
-              "type": "Er. K.B. Rathnakara Reddy",
-              "description": "Managing Director, Infra Support Engineering Consultants",
-              "value": "Industry Expert",
-              "isLink": false
-            },
-            {
-              "idNo": "6",
-              "type": "Ms. T. Nirmala Devi",
-              "description": "Senior Engineer, L&T Ltd.",
-              "value": "Alumnus",
-              "isLink": false
-            }
-          ]
-        }
-      ],
-      "customHeaders": [
-        "S.No.",
-        "Member Name",
-        "Designation",
-        "Category/Position"
-      ]
+      "categoryId": "cat-2"
     },
     {
       "id": "16",
-      "title": "Student Welfare",
+      "title": "Student Welfare Committee",
       "url": "#",
-      "categoryId": "cat-2",
-      "sections": [
-        {
-          "id": "sec-16",
-          "title": "Student Welfare Members",
-          "items": [
-            {
-              "idNo": "1",
-              "type": "Dr. M. Aravind Kumar",
-              "description": "Principal",
-              "value": "Chairman",
-              "isLink": false
-            },
-            {
-              "idNo": "2",
-              "type": "Sri L. Sankar",
-              "description": "HOD-ECE",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "3",
-              "type": "Sri V. Sumanth",
-              "description": "Physical Director",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "4",
-              "type": "Ch. Raja sekhar",
-              "description": "Librarian",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "5",
-              "type": "Sri K. Muralidhar",
-              "description": "Coord. Student Affairs",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "6",
-              "type": "Sri K. Jayaramakrishna",
-              "description": "HOD-BS&H",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "7",
-              "type": "Sri V. Ramadevi",
-              "description": "Asst. Prof - MBA",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "8",
-              "type": "Sri N. Kondayya",
-              "description": "Asst. Prof - MECH",
-              "value": "Member",
-              "isLink": false
-            }
-          ]
-        }
-      ]
+      "categoryId": "cat-2"
     },
     {
       "id": "17",
       "title": "Sexual Harassment Cell",
       "url": "#",
-      "categoryId": "cat-2",
-      "customHeaders": [
-        "ID.No",
-        "Committee",
-        "Description",
-        "View"
-      ],
-      "sections": [
-        {
-          "id": "sec-17",
-          "title": "Sexual Harassment Cell Members",
-          "items": [
-            {
-              "idNo": "1",
-              "type": "Mr. K. Muralidhar",
-              "description": "Asst. Prof",
-              "value": "Presiding Officer",
-              "isLink": false
-            },
-            {
-              "idNo": "2",
-              "type": "Mrs. P. Sravani",
-              "description": "Asst. Prof",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "3",
-              "type": "Mrs. B. Lavanya",
-              "description": "Asst. Prof",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "4",
-              "type": "Mr. A. Raju Kumar",
-              "description": "Non-Teaching",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "5",
-              "type": "Mrs. K. Sudharani",
-              "description": "Asst. Prof",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "6",
-              "type": "Miss. P. Durga",
-              "description": "Student-CSE",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "7",
-              "type": "Miss. K. Deepthi",
-              "description": "Student-ECE",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "8",
-              "type": "Miss. M. Anitha",
-              "description": "Student-AI&DS",
-              "value": "Member",
-              "isLink": false
-            }
-          ]
-        }
-      ]
+      "categoryId": "cat-2"
     },
     {
       "id": "18",
-      "title": "Anti-Ragging",
+      "title": "Anti-Ragging Committee",
       "url": "#",
-      "categoryId": "cat-2",
-      "customHeaders": [
-        "ID.No",
-        "Committee",
-        "Description",
-        "View"
-      ],
-      "sections": [
-        {
-          "id": "sec-18",
-          "title": "Anti-Ragging Members",
-          "items": [
-            {
-              "idNo": "1",
-              "type": "Dr. M. Aravind Kumar",
-              "description": "Principal",
-              "value": "Chairman",
-              "isLink": false
-            },
-            {
-              "idNo": "2",
-              "type": "Sri L. Sankar",
-              "description": "HOD-ECE",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "3",
-              "type": "Sri K. Muralidhar",
-              "description": "Coordinator",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "4",
-              "type": "Sri K. Jayarama Krishna",
-              "description": "HOD-BS&H",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "5",
-              "type": "Sri P. Prasad",
-              "description": "Parent Representative",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "6",
-              "type": "Sri P. Venkatesh",
-              "description": "Student-CSE",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "7",
-              "type": "Sri G. Sai",
-              "description": "Student-ECE",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "8",
-              "type": "Sri K. Rajesh",
-              "description": "Student-ME",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "9",
-              "type": "Sri M. Ramu",
-              "description": "Student-MBA",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "10",
-              "type": "Sri L. Durga",
-              "description": "Student-AI&DS",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "11",
-              "type": "Smt. B. Lavanya",
-              "description": "Asst. Prof - BS&H",
-              "value": "Member",
-              "isLink": false
-            }
-          ]
-        }
-      ]
+      "categoryId": "cat-2"
     },
     {
       "id": "19",
-      "title": "Research and",
+      "title": "Research and Development",
       "url": "#",
       "categoryId": "cat-2"
     },
     {
       "id": "19a",
-      "title": "Career Guidance",
+      "title": "Career Guidance Committee",
       "url": "#",
       "categoryId": "cat-2"
     },
     {
       "id": "19b",
-      "title": "Innovation and Entrepreneurship",
+      "title": "Innovation and Entrepreneurship Development",
       "url": "#",
       "categoryId": "cat-2"
     },
     {
       "id": "19c",
-      "title": "Institute Innovation",
+      "title": "Institute Innovation Council (IIC)",
       "url": "#",
       "categoryId": "cat-2"
     },
     {
       "id": "19d",
-      "title": "NSS",
+      "title": "NSS Committee",
       "url": "#",
-      "categoryId": "cat-2",
-      "sections": [
-        {
-          "id": "sec-19d",
-          "title": "NSS Committee Members",
-          "items": [
-            {
-              "idNo": "1",
-              "type": "Dr. M.Aravindkumar",
-              "description": "Principal",
-              "value": "Chairman",
-              "isLink": false
-            },
-            {
-              "idNo": "2",
-              "type": "Mr.K.Muralidhar",
-              "description": "Assoc. Prof. ME Dept.",
-              "value": "Coordinator",
-              "isLink": false
-            },
-            {
-              "idNo": "3",
-              "type": "Dr.A.S.Prasad",
-              "description": "Head of MBA Dept.",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "4",
-              "type": "Mr.N.Prasanna kumar",
-              "description": "Asst.Prof. MBA Dept",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "5",
-              "type": "Mr.M.Rajesh",
-              "description": "Asst.Prof. ECE Dept.",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "6",
-              "type": "Mr.N.Kondayya",
-              "description": "Asst.Prof. ME Dept",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "7",
-              "type": "Mr.K.Jayaramakrishna",
-              "description": "Assoc. Prof. S&H Dept.",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "8",
-              "type": "Mr.S.Rajeev",
-              "description": "Asst.Prof. CSE Dept",
-              "value": "Member",
-              "isLink": false
-            },
-            {
-              "idNo": "9",
-              "type": "Mr.N.Durgaprasad",
-              "description": "Student Volunteer, ECE",
-              "value": "Member",
-              "isLink": false
-            }
-          ]
-        }
-      ]
+      "categoryId": "cat-2"
     },
     {
       "id": "20",
@@ -3006,10 +1894,10 @@
     }
   ],
   "psychologist": {
-    "name": "Veera Raghava Chinmmana",
-    "designation": "Sr. Psychologist & Counselor",
-    "qualifications": "Professional Mental Health Practitioner",
-    "description": "A professional psychologist plays a vital role in institutional growth by supporting the mental well-being and academic success of students. Veera Raghava Chinmmana is dedicated to providing comprehensive counseling services, guidance, and support systems to help students navigate challenges and achieve their full potential.\n\nContact Number: 92922252888\n\nYou can reach out for consultation during regular working hours or in case of psychological emergencies.",
+    "name": "P.Sravani",
+    "designation": "Sr. Psychologist",
+    "qualifications": "M.Sc. (Psychology),PG Diploma in Mental Health",
+    "description": "A psychologist studies human behavior and mental processes... They play a vital role...",
     "mou1Link": "",
     "mou2Link": ""
   }

@@ -11,7 +11,14 @@ export const Admin: React.FC = () => {
   const { categories, links, addCategory, updateCategory, deleteCategory, addLink, updateLink, deleteLink, updateLinkFull, logout, heroImage, setHeroImage } = useCMS();
   const navigate = useNavigate();
   
-  const [activeCategoryId, setActiveCategoryId] = useState<string>(categories[0]?.id || '');
+  const [activeCategoryId, setActiveCategoryId] = useState<string>('');
+  
+  // Auto-select first category if none is active
+  React.useEffect(() => {
+    if (!activeCategoryId && categories.length > 0) {
+      setActiveCategoryId(categories[0].id);
+    }
+  }, [categories, activeCategoryId]);
 
   // Modals state
   const [isLinkModalOpen, setIsLinkModalOpen] = useState(false);
@@ -101,7 +108,7 @@ export const Admin: React.FC = () => {
       <aside className="admin-sidebar shadow-xl">
         <div className="admin-brand">
           <Settings size={28} className="text-blue-600" />
-          <h2>Admin CMS</h2>
+          <h2 className="font-bold tracking-tight">WISE CMS</h2>
         </div>
         
         <nav className="flex-1 overflow-y-auto mt-6 px-4">

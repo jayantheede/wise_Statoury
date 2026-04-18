@@ -1,0 +1,1019 @@
+812-              "type": "Training and Placement Cell",
+813-              "description": "Placement Cell",
+814-              "value": "https://docs.google.com/document/d/1l6xWWtRAkSUE17R1CgeboAr6PH-wMK9B/edit",
+815-              "isLink": true
+816-            },
+817-            {
+818-              "idNo": "7.2",
+819-              "type": "Industry Partnerships",
+820-              "description": "Industry Partnerships",
+821-              "value": "https://drive.google.com/file/d/1FlUfZ43ptOJiBT2qcaBM10hIQ4iFX7c1/view  ,    https://docs.google.com/document/d/1uatsG1r2AvKuykMKBRlk0u-2_QWB0E6Z/edit",
+822-              "isLink": true
+823-            },
+824-            {
+825-              "idNo": "7.3",
+826-              "type": "Internship/ Apprenticeship Opportunities",
+827-              "description": "Internship/ Apprenticeship Opportunities",
+828-              "value": "https://docs.google.com/document/d/1mcjlRGNOEiilcomss6X3X0kBOQEdRlpc/edit",
+829-              "isLink": true
+830-            },
+831-            {
+832-              "idNo": "7.4",
+833-              "type": "Campus Recruitment Statistics",
+834-              "description": "Campus Recruitment Statistics",
+835-              "value": "https://docs.google.com/document/d/16Rm03AQJs2WvubsS7xGy2HD1ExNno6xV/edit?rtpof=true&sd=true",
+836-              "isLink": false
+837-            },
+838-            {
+839-              "idNo": "7.5",
+840-              "type": "Entrepreneurship & Start-Up Support",
+841-              "description": "Entrepreneurship & Start-Up Support",
+842-              "value": "",
+843-              "isLink": false
+844-            },
+845-            {
+846-              "idNo": "",
+847-              "type": "",
+848-              "description": "Patents",
+849-              "value": "",
+850-              "isLink": false
+851-            },
+852-            {
+853-              "idNo": "",
+854-              "type": "",
+855-              "description": "Innovations",
+856-              "value": "",
+857-              "isLink": false
+858-            },
+859-            {
+860-              "idNo": "",
+861-              "type": "",
+862-              "description": "IEDC",
+863-              "value": "",
+864-              "isLink": false
+865-            },
+866-            {
+867-              "idNo": "7.6",
+868-              "type": "Skill Development Initiatives",
+869-              "description": "FDPs",
+870-              "value": "https://docs.google.com/document/d/1oCKSz3KhlL7MzZ13HxQq1iifm8BMYh-J/edit",
+871-              "isLink": true
+872-            },
+873-            {
+874-              "idNo": "7.7",
+875-              "type": "Corporate Social Responsibility (CSR) Engagements",
+876-              "description": "NSS",
+877-              "value": "",
+878-              "isLink": false
+879-            },
+880-            {
+881-              "idNo": "7.8",
+882-              "type": "Professional Certification Programmes",
+883-              "description": "Professional Certification Programmes",
+884-              "value": "https://docs.google.com/document/d/1NQH_8u7wGJVKW0HQhsuq8-xWnZj_hOBV/edit",
+885-              "isLink": true
+886-            }
+887-          ]
+888-        },
+889-        {
+890-          "id": "sec-8",
+891-          "title": "8. Internationalisation and Global Engagement",
+892-          "items": [
+893-            {
+894-              "idNo": "8.1",
+895-              "type": "Internationalisation Policy",
+896-              "description": "Policies",
+897-              "value": "",
+898-              "isLink": false
+899-            },
+900-            {
+901-              "idNo": "8.2",
+902-              "type": "MoUs / Agreements",
+903-              "description": "MoUs",
+904-              "value": "https://drive.google.com/file/d/1FlUfZ43ptOJiBT2qcaBM10hIQ4iFX7c1/view",
+905-              "isLink": true
+906-            },
+907-            {
+908-              "idNo": "8.3",
+909-              "type": "International Students",
+910-              "description": "International Students",
+911-              "value": "",
+912-              "isLink": false
+913-            },
+914-            {
+915-              "idNo": "8.4",
+916-              "type": "International Faculty/ Fellows",
+917-              "description": "International Faculty/ Fellows",
+918-              "value": "",
+919-              "isLink": false
+920-            },
+921-            {
+922-              "idNo": "8.5",
+923-              "type": "Joint / Dual / Cotutelle Programmes",
+924-              "description": "Joint / Dual / Cotutelle Programmes",
+925-              "value": "",
+926-              "isLink": false
+927-            },
+928-            {
+929-              "idNo": "8.6",
+930-              "type": "Global Research Collaborations",
+931-              "description": "Publications",
+932-              "value": "",
+933-              "isLink": false
+934-            },
+935-            {
+936-              "idNo": "8.7",
+937-              "type": "International Internships and Fellowships",
+938-              "description": "International Internships and Fellowships",
+939-              "value": "",
+940-              "isLink": false
+941-            },
+942-            {
+943-              "idNo": "8.8",
+944-              "type": "International Advisory Board",
+945-              "description": "International Advisory Board",
+946-              "value": "",
+947-              "isLink": false
+948-            },
+949-            {
+950-              "idNo": "8.9",
+951-              "type": "International Accreditations / Memberships",
+952-              "description": "International Accreditations / Memberships",
+953-              "value": "",
+954-              "isLink": false
+955-            },
+956-            {
+957-              "idNo": "8.10",
+958-              "type": "Global Alumni and Outreach",
+959-              "description": "Global Alumni and Outreach",
+960-              "value": "",
+961-              "isLink": false
+962-            }
+963-          ]
+964-        },
+965-        {
+966-          "id": "sec-9",
+967-          "title": "9. Infrastructure, Learning Resources, and Facilities",
+968-          "items": [
+969-            {
+970-              "idNo": "9.1",
+971-              "type": "Campus Land and Buildings",
+972-              "description": "Campus Land and Buildings",
+973-              "value": "https://docs.google.com/document/d/1trG5BL2vCDyTQpmqBGnjlX5S43zthsQJ/edit#heading=h.v00y3r2l5rej",
+974-              "isLink": true
+975-            },
+976-            {
+977-              "idNo": "9.2",
+978-              "type": "Classrooms and Laboratories",
+979-              "description": "Classrooms and Laboratories",
+980-              "value": "https://docs.google.com/document/d/1-RCIQxXRmil91hSq9oN5TMIJA9ve-6Nn/edit#heading=h.4scb1amhcegn",
+981-              "isLink": true
+982-            },
+983-            {
+984-              "idNo": "9.3",
+985-              "type": "Library and Learning Resources",
+986-              "description": "Library and Learning Resources",
+987-              "value": "https://docs.google.com/document/d/1nqQxEFvq8suewQVtbL0C1X3U-ORCoI2A/edit?rtpof=true&sd=true",
+988-              "isLink": true
+989-            },
+990-            {
+991-              "idNo": "9.4",
+992-              "type": "ICT and Digital Infrastructure",
+993-              "description": "ICT and Digital Infrastructure",
+994-              "value": "https://docs.google.com/document/d/1FJUZS-XcfFOEa5s1ZMaXk-_ah8_mHIK5/edit",
+995-              "isLink": true
+996-            },
+997-            {
+998-              "idNo": "9.5",
+999-              "type": "Hostels, Canteens, Transport",
+1000-              "description": "Hostels, Canteens",
+1001-              "value": "https://docs.google.com/document/d/1csN3q0T8PlqxHXmAHG-qCOTZDH-Y4nrz/edit",
+1002-              "isLink": true
+1003-            },
+1004-            {
+1005-              "idNo": "",
+1006-              "type": "",
+1007-              "description": "Transport",
+1008-              "value": "",
+1009-              "isLink": false
+1010-            },
+1011-            {
+1012-              "idNo": "9.6",
+1013-              "type": "Health and Wellness",
+1014-              "description": "Health and Wellness",
+1015-              "value": "https://docs.google.com/document/d/1CYAjDcNqmQu2HWLhdXRUgt4waBJ81JBy/edit",
+1016-              "isLink": true
+1017-            },
+1018-            {
+1019-              "idNo": "9.7",
+1020-              "type": "Sports, Cultural and Recreation",
+1021-              "description": "Sports, Cultural and Recreation",
+1022-              "value": "https://docs.google.com/document/d/1wwAJ1Jn7RMKwIa2X1ugajdDS3TbRyygI/edit",
+1023-              "isLink": true
+1024-            },
+1025-            {
+1026-              "idNo": "9.8",
+1027-              "type": "Safety, Security, and Disaster Management",
+1028-              "description": "Safety, Security, and Disaster Management",
+1029-              "value": "",
+1030-              "isLink": false
+1031-            },
+1032-            {
+1033-              "idNo": "9.9",
+1034-              "type": "Environmental Sustainability",
+1035-              "description": "Environmental Sustainability",
+1036-              "value": "",
+1037-              "isLink": false
+1038-            },
+1039-            {
+1040-              "idNo": "9.10",
+1041-              "type": "Barrier-Free and Inclusive Access",
+1042-              "description": "Barrier-Free and Inclusive Access",
+1043-              "value": "",
+1044-              "isLink": false
+1045-            }
+1046-          ]
+1047-        },
+1048-        {
+1049-          "id": "sec-10",
+1050-          "title": "10. Finance and Audit",
+1051-          "items": [
+1052-            {
+1053-              "idNo": "10.1",
+1054-              "type": "Annual Budget",
+1055-              "description": "Annual Budgetew",
+1056-              "value": "https://drive.google.com/file/d/1LkpZgeGWfLaUKIMr2r5eVxZukl6uWusd/view",
+1057-              "isLink": true
+1058-            },
+1059-            {
+1060-              "idNo": "10.2",
+1061-              "type": "Audited Financial Statements",
+1062-              "description": "Audited Financial Statements",
+1063-              "value": "",
+1064-              "isLink": false
+1065-            },
+1066-            {
+1067-              "idNo": "10.3",
+1068-              "type": "Sources of Income",
+1069-              "description": "Sources of Income",
+1070-              "value": "Tuition fees & Consultancy",
+1071-              "isLink": false
+1072-            },
+1073-            {
+1074-              "idNo": "10.4",
+1075-              "type": "Endowments and Corpus Funds",
+1076-              "description": "Endowments and Corpus Funds",
+1077-              "value": "N/A",
+1078-              "isLink": false
+1079-            },
+1080-            {
+1081-              "idNo": "10.5",
+1082-              "type": "Procurement and Purchase Policy",
+1083-              "description": "Procurement and Purchase",
+1084-              "value": "Transparency and e-governance practices",
+1085-              "isLink": false
+1086-            },
+1087-            {
+1088-              "idNo": "10.6",
+1089-              "type": "Utilisation Certificates",
+1090-              "description": "Utilisation Certificates",
+1091-              "value": "",
+1092-              "isLink": false
+1093-            }
+1094-          ]
+1095-        },
+1096-        {
+1097-          "id": "sec-11",
+1098-          "title": "11. Quality Assurance and Accreditation",
+1099-          "items": [
+1100-            {
+1101-              "idNo": "11.1",
+1102-              "type": "Internal Quality Assurance Cell (IQAC)",
+1103-              "description": "IQAC",
+1104-              "value": "https://docs.google.com/document/d/1TdLSNuCbJ3rwsibfoVtHerYDy9eAHpDO/edit",
+1105-              "isLink": true
+1106-            },
+1107-            {
+1108-              "idNo": "11.2",
+1109-              "type": "NAAC /NBA Accreditation Status",
+1110-              "description": "NAAC",
+1111-              "value": "https://docs.google.com/document/d/16coPf4L5d-FhO8c_Dd5xemBOCgmIDOO8/edit",
+1112-              "isLink": true
+1113-            },
+1114-            {
+1115-              "idNo": "",
+1116-              "type": "",
+1117-              "description": "NBA",
+1118-              "value": "",
+1119-              "isLink": false
+1120-            },
+1121-            {
+1122-              "idNo": "11.3",
+1123-              "type": "NIRF / State Rankings",
+1124-              "description": "NIRF",
+1125-              "value": "",
+1126-              "isLink": false
+1127-            },
+1128-            {
+1129-              "idNo": "11.4",
+1130-              "type": "Academic and Administrative Audit",
+1131-              "description": "AAC",
+1132-              "value": "https://docs.google.com/document/d/1RoCpCGdry9l3tt-VNSeSdEcIfuTFZiOD/edit",
+1133-              "isLink": true
+1134-            },
+1135-            {
+1136-              "idNo": "11.5",
+1137-              "type": "Annual Quality Assurance Reports (AQAR)",
+1138-              "description": "AQAR Reports",
+1139-              "value": "https://drive.google.com/file/d/1VXDA7bRowox-BruXp1ipyRGv4enXo9ad/view",
+1140-              "isLink": true
+1141-            },
+1142-            {
+1143-              "idNo": "11.6",
+1144-              "type": "Institutional Best Practices",
+1145-              "description": "Best Practices",
+1146-              "value": "https://drive.google.com/file/d/1UCDkXOa_3pd99yYou2pHpQaYSaasnEot/view",
+1147-              "isLink": true
+1148-            },
+1149-            {
+1150-              "idNo": "11.7",
+1151-              "type": "Feedback Mechanisms",
+1152-              "description": "Feedback Mechanisms",
+1153-              "value": "https://docs.google.com/document/d/1DTGmHwpNiu8K-i3gYXrrjI2jGT0KiVKA/edit",
+1154-              "isLink": true
+1155-            }
+1156-          ]
+1157-        },
+1158-        {
+1159-          "id": "sec-12",
+1160-          "title": "12. Statutory and Public Disclosure Compliance",
+1161-          "items": [
+1162-            {
+1163-              "idNo": "12.1",
+1164-              "type": "Grievance Redressal Committee",
+1165-              "description": "GR Committee",
+1166-              "value": "https://docs.google.com/document/d/1p9JJy7_W5iYBA3whq7lWsP1RdUwNqF0E/edit",
+1167-              "isLink": true
+1168-            },
+1169-            {
+1170-              "idNo": "12.2",
+1171-              "type": "Internal Complaints Committee (ICC)",
+1172-              "description": "ICC Committee",
+1173-              "value": "https://docs.google.com/document/d/1a4e4pVCG09DmeNDJLxkISihLeHg6ibn-/edit",
+1174-              "isLink": true
+1175-            },
+1176-            {
+1177-              "idNo": "12.3",
+1178-              "type": "Anti-Ragging Committee",
+1179-              "description": "AR Committee",
+1180-              "value": "https://docs.google.com/document/d/1rn7cweFBUXIxdw1WbcKSVej78gT1CRP1/edit",
+1181-              "isLink": true
+1182-            },
+1183-            {
+1184-              "idNo": "12.4",
+1185-              "type": "RTI Information",
+1186-              "description": "RTI",
+1187-              "value": "https://docs.google.com/document/d/1q2UnfpKe5ZcgnW5zNfrHmSUsAWDchx0k/edit",
+1188-              "isLink": true
+1189-            },
+1190-            {
+1191-              "idNo": "12.5",
+1192-              "type": "Ombudsperson / Student Grievance Portal",
+1193-              "description": "GRC",
+1194-              "value": "https://docs.google.com/document/d/16pu6ycXg5PujjW5Szr3ASmcmp-1cZuoF/edit",
+1195-              "isLink": true
+1196-            },
+1197-            {
+1198-              "idNo": "12.6",
+1199-              "type": "Annual Reports",
+1200-              "description": "Annual reports",
+1201-              "value": "",
+1202-              "isLink": false
+1203-            },
+1204-            {
+1205-              "idNo": "12.7",
+1206-              "type": "Disclosure Update Protocol",
+1207-              "description": "Disclosure Update Protocol",
+1208-              "value": "https://docs.google.com/document/d/1ZHgLS-7jR-ubkIWL7nInSwq4cNjdLc8t/edit",
+1209-              "isLink": true
+1210-            }
+1211-          ]
+1212-        },
+1213-        {
+1214-          "id": "sec-13",
+1215-          "title": "13. Continuous Improvement and Future Directions",
+1216-          "items": [
+1217-            {
+1218-              "idNo": "13.1",
+1219-              "type": "Institutional Performance Indicators",
+1220-              "description": "Institutional Performance Indicators",
+1221-              "value": "",
+1222-              "isLink": false
+1223-            },
+1224-            {
+1225-              "idNo": "13.2",
+1226-              "type": "Strategic Priorities (Next 5 Years)",
+1227-              "description": "Strategic Priorities (Next 5 Years)",
+1228-              "value": "",
+1229-              "isLink": false
+1230-            },
+1231-            {
+1232-              "idNo": "13.3",
+1233-              "type": "Stakeholder Engagement Framework",
+1234-              "description": "Stakeholder Engagement Framework",
+1235-              "value": "",
+1236-              "isLink": false
+1237-            },
+1238-            {
+1239-              "idNo": "13.4",
+1240-              "type": "Vision for 2047",
+1241-              "description": "Vision for 2047",
+1242-              "value": "",
+1243-              "isLink": false
+1244-            }
+1245-          ]
+1246-        }
+1247-      ],
+1248-      "images": [],
+1249-      "customHeaders": [
+1250-        "ID.No",
+1251-        "Type",
+1252-        "Description",
+1253-        "Link / Description"
+1254-      ]
+1255-    },
+1256-    {
+1257-      "id": "2",
+1258-      "title": "Policies & Procedures",
+1259-      "url": "#",
+1260-      "categoryId": "cat-1"
+1261-    },
+1262-    {
+1263-      "id": "3",
+1264-      "title": "Governing Body",
+1265-      "url": "#",
+1266-      "categoryId": "cat-1",
+1267-      "sections": [
+1268-        {
+1269-          "id": "sec-1776074379242",
+1270-          "title": "New Section",
+1271-          "items": [
+1272-            {
+1273-              "idNo": "1.",
+1274-              "type": "Sri Nanadhyala Krishna Murthy",
+1275-              "description": "Chairman",
+1276-              "value": "",
+1277-              "isLink": false
+1278-            },
+1279-            {
+1280-              "idNo": "2.",
+1281-              "type": "Sri Ethakota Bhima Shankar Rao",
+1282-              "description": "Vice-Chairman",
+1283-              "value": "",
+1284-              "isLink": false
+1285-            },
+1286-            {
+1287-              "idNo": "3.",
+1288-              "type": "Sri Akula Trimurthy",
+1289-              "description": "Secretary & Correspondent",
+1290-              "value": "",
+1291-              "isLink": false
+1292-            },
+1293-            {
+1294-              "idNo": "4.",
+1295-              "type": "Sri Namana Rambabu",
+1296-              "description": "Joint Secretary",
+1297-              "value": "",
+1298-              "isLink": false
+1299-            },
+1300-            {
+1301-              "idNo": "5.",
+1302-              "type": "Sri Sanam Mihir Mohan",
+1303-              "description": "Treasurer",
+1304-              "value": "",
+1305-              "isLink": false
+1306-            },
+1307-            {
+1308-              "idNo": "6.",
+1309-              "type": "Sri Ethakota Konda Babu",
+1310-              "description": "",
+1311-              "value": "",
+1312-              "isLink": false
+1313-            },
+1314-            {
+1315-              "idNo": "7.",
+1316-              "type": "Sri Kollapureddy Venkata Rama Rao",
+1317-              "description": "",
+1318-              "value": "",
+1319-              "isLink": false
+1320-            },
+1321-            {
+1322-              "idNo": "8.",
+1323-              "type": "Sri Gattim Manikyala Rao",
+1324-              "description": "",
+1325-              "value": "",
+1326-              "isLink": false
+1327-            },
+1328-            {
+1329-              "idNo": "9.",
+1330-              "type": "Sri Nandhyala Satyanarayana",
+1331-              "description": "",
+1332-              "value": "",
+1333-              "isLink": false
+1334-            },
+1335-            {
+1336-              "idNo": "10.",
+1337-              "type": "Sri Janga Surya Prakash Balaji",
+1338-              "description": "",
+1339-              "value": "",
+1340-              "isLink": false
+1341-            },
+1342-            {
+1343-              "idNo": "11.",
+1344-              "type": "Sri Kola Venkata Raju",
+1345-              "description": "",
+1346-              "value": "",
+1347-              "isLink": false
+1348-            },
+1349-            {
+1350-              "idNo": "12.",
+1351-              "type": "Sri Kalla Trimurthulu",
+1352-              "description": "",
+1353-              "value": "",
+1354-              "isLink": false
+1355-            },
+1356-            {
+1357-              "idNo": "13.",
+1358-              "type": "Smt Pasupulate Rama Lakshmi",
+1359-              "description": "",
+1360-              "value": "",
+1361-              "isLink": false
+1362-            },
+1363-            {
+1364-              "idNo": "14.",
+1365-              "type": "Sri Kollapureddy Phani Krishna",
+1366-              "description": "",
+1367-              "value": "",
+1368-              "isLink": false
+1369-            },
+1370-            {
+1371-              "idNo": "15.",
+1372-              "type": "Dr Ethakota N.V.V. Satyanarayana",
+1373-              "description": "",
+1374-              "value": "",
+1375-              "isLink": false
+1376-            },
+1377-            {
+1378-              "idNo": "16.",
+1379-              "type": "Sri Gattim Naveen Kishore",
+1380-              "description": "",
+1381-              "value": "",
+1382-              "isLink": false
+1383-            },
+1384-            {
+1385-              "idNo": "17.",
+1386-              "type": "Sri Palnati sujith Sai",
+1387-              "description": "",
+1388-              "value": "",
+1389-              "isLink": false
+1390-            },
+1391-            {
+1392-              "idNo": "18.",
+1393-              "type": "Sri Gajula Srimannarayana Murthy ",
+1394-              "description": "",
+1395-              "value": "",
+1396-              "isLink": false
+1397-            }
+1398-          ]
+1399-        }
+1400-      ],
+1401-      "images": [],
+1402-      "customHeaders": [
+1403-        "ID.No",
+1404-        "Member Name",
+1405-        "Category",
+1406-        "Link / Description"
+1407-      ]
+1408-    },
+1409-    {
+1410-      "id": "4",
+1411-      "title": "Academic Council",
+1412-      "url": "https://docs.google.com/document/d/1yyJSX0Yp7oWMTnuh8XuQxx3O3J5uWhMX/edit?usp=drive_link&ouid=110649713397356059091&rtpof=true&sd=true",
+1413-      "categoryId": "cat-1"
+1414-    },
+1415-    {
+1416-      "id": "5",
+1417-      "title": "Board of Studies",
+1418-      "url": "#",
+1419-      "categoryId": "cat-1"
+1420-    },
+1421-    {
+1422-      "id": "6",
+1423-      "title": "Finance Committee",
+1424-      "url": "#",
+1425-      "categoryId": "cat-1"
+1426-    },
+1427-    {
+1428-      "id": "7",
+1429-      "title": "Institutional Strategic Plan",
+1430-      "url": "https://docs.google.com/document/d/1gGiEVp4thQE2aKmdY6HujPzzqcDhqf0c/edit",
+1431-      "categoryId": "cat-1"
+1432-    },
+1433-    {
+1434-      "id": "8",
+1435-      "title": "Psychologist",
+1436-      "url": "/psychologist",
+1437-      "categoryId": "cat-1"
+1438-    },
+1439-    {
+1440-      "id": "10",
+1441-      "title": "IQAC Committee",
+1442-      "url": "#",
+1443-      "categoryId": "cat-2",
+1444-      "sections": [],
+1445-      "images": [],
+1446-      "customHeaders": [
+1447-        "",
+1448-        "",
+1449-        "",
+1450-        ""
+1451-      ]
+1452-    },
+1453-    {
+1454-      "id": "11",
+1455-      "title": "Planning and Evaluation",
+1456-      "url": "#",
+1457-      "categoryId": "cat-2",
+1458-      "sections": [
+1459-        {
+1460-          "id": "sec-1776072066098",
+1461-          "title": "New Section",
+1462-          "items": [
+1463-            {
+1464-              "idNo": "1",
+1465-              "type": "Dr.M.Aravind Kumar",
+1466-              "description": "Principal",
+1467-              "value": "Chairman",
+1468-              "isLink": false
+1469-            },
+1470-            {
+1471-              "idNo": "2",
+1472-              "type": "Smt.P.Sravani",
+1473-              "description": "Controller of examination Asst.Prof.of H&S",
+1474-              "value": "Co-Ordinator",
+1475-              "isLink": false
+1476-            },
+1477-            {
+1478-              "idNo": "3",
+1479-              "type": "Sri.K.Muralidhar",
+1480-              "description": "Assistant Professor-MECH",
+1481-              "value": "Member",
+1482-              "isLink": false
+1483-            },
+1484-            {
+1485-              "idNo": "4",
+1486-              "type": "Sri.T.v.v.Anjaneyulu",
+1487-              "description": "Admin Officer",
+1488-              "value": "Member",
+1489-              "isLink": false
+1490-            },
+1491-            {
+1492-              "idNo": "5",
+1493-              "type": "Smt.U.Jhansi Rani",
+1494-              "description": "AGM Accounts",
+1495-              "value": "Member",
+1496-              "isLink": false
+1497-            }
+1498-          ]
+1499-        }
+1500-      ],
+1501-      "images": [],
+1502-      "customHeaders": [
+1503-        " S.No.",
+1504-        "Member Name",
+1505-        "Designation",
+1506-        "Category/Position"
+1507-      ]
+1508-    },
+1509-    {
+1510-      "id": "12",
+1511-      "title": "Grievance Redressal",
+1512-      "url": "#",
+1513-      "categoryId": "cat-2",
+1514-      "sections": [
+1515-        {
+1516-          "id": "sec-1776056442117",
+1517-          "title": "New Section",
+1518-          "items": [
+1519-            {
+1520-              "idNo": "1.",
+1521-              "type": " Dr. M . Aravind Kumar",
+1522-              "description": "Principal",
+1523-              "value": "Chairman",
+1524-              "isLink": false
+1525-            },
+1526-            {
+1527-              "idNo": "2",
+1528-              "type": "Dr. P.Amaravathi",
+1529-              "description": "Professor-CSE",
+1530-              "value": "Member Secretary",
+1531-              "isLink": false
+1532-            },
+1533-            {
+1534-              "idNo": "3",
+1535-              "type": "Dr. A .S . Prasad",
+1536-              "description": "HOD -MBA",
+1537-              "value": "Member",
+1538-              "isLink": false
+1539-            },
+1540-            {
+1541-              "idNo": "4",
+1542-              "type": "Smt.N.L. Tejaswini",
+1543-              "description": "Assistant Professor CSE DS",
+1544-              "value": "Member",
+1545-              "isLink": false
+1546-            },
+1547-            {
+1548-              "idNo": "5",
+1549-              "type": "Sri.N.Kondayya ",
+1550-              "description": "Assistant Professor ME",
+1551-              "value": "Member",
+1552-              "isLink": false
+1553-            }
+1554-          ]
+1555-        }
+1556-      ],
+1557-      "images": [],
+1558-      "customHeaders": [
+1559-        " S.No",
+1560-        "Member Name",
+1561-        "Designation",
+1562-        "Category/Position"
+1563-      ]
+1564-    },
+1565-    {
+1566-      "id": "13",
+1567-      "title": "Examination Committee",
+1568-      "url": "#",
+1569-      "categoryId": "cat-2",
+1570-      "sections": [
+1571-        {
+1572-          "id": "sec-1776072807266",
+1573-          "title": "New Section",
+1574-          "items": [
+1575-            {
+1576-              "idNo": "1.",
+1577-              "type": "Sri.K.Muralidhar",
+1578-              "description": "Assistant Professor -ME",
+1579-              "value": "Controller of examination",
+1580-              "isLink": false
+1581-            },
+1582-            {
+1583-              "idNo": "2",
+1584-              "type": "Smt.P.Sravani",
+1585-              "description": "Assistant Professor -H&S",
+1586-              "value": "Additional Controller of Examinations-1",
+1587-              "isLink": false
+1588-            },
+1589-            {
+1590-              "idNo": "3",
+1591-              "type": "Smt.B.Lavanya",
+1592-              "description": "Assistant Professor -H&S",
+1593-              "value": "Additional Controller of Examinations-11",
+1594-              "isLink": false
+1595-            },
+1596-            {
+1597-              "idNo": "4",
+1598-              "type": "Sri.N.Kondayya",
+1599-              "description": "Assistant Professor -ME",
+1600-              "value": "Member",
+1601-              "isLink": false
+1602-            },
+1603-            {
+1604-              "idNo": "5",
+1605-              "type": "Sri.A.Pavani",
+1606-              "description": "Assistant Professor -CSE",
+1607-              "value": "Member",
+1608-              "isLink": false
+1609-            },
+1610-            {
+1611-              "idNo": "6",
+1612-              "type": "Smt.N.L.Tejaswini ",
+1613-              "description": "Assistant Professor -CSE-DS",
+1614-              "value": "Member",
+1615-              "isLink": false
+1616-            },
+1617-            {
+1618-              "idNo": "7",
+1619-              "type": "Sri.K.Sudharani",
+1620-              "description": "Assistant Professor -ECE",
+1621-              "value": "Member",
+1622-              "isLink": false
+1623-            },
+1624-            {
+1625-              "idNo": "8",
+1626-              "type": "Sri.K.Lalitha",
+1627-              "description": "Assistant Professor -ECE",
+1628-              "value": "Member",
+1629-              "isLink": false
+1630-            },
+1631-            {
+1632-              "idNo": "9",
+1633-              "type": "Sri.M.Prasanna Kumar",
+1634-              "description": "Assistant Professor -MBA",
+1635-              "value": "Member",
+1636-              "isLink": false
+1637-            }
+1638-          ]
+1639-        }
+1640-      ],
+1641-      "images": [],
+1642-      "customHeaders": [
+1643-        "ID.No",
+1644-        "Type",
+1645-        "Description",
+1646-        "Link / Description"
+1647-      ]
+1648-    },
+1649-    {
+1650-      "id": "14",
+1651-      "title": "Admission Committee",
+1652-      "url": "#",
+1653-      "categoryId": "cat-2",
+1654-      "sections": [
+1655-        {
+1656-          "id": "sec-1776071268498",
+1657-          "title": "New Section",
+1658-          "items": [
+1659-            {
+1660-              "idNo": "1",
+1661-              "type": "Dr.M.Aravind Kumar",
+1662-              "description": "Princpal",
+1663-              "value": "Chairman",
+1664-              "isLink": true
+1665-            },
+1666-            {
+1667-              "idNo": "2",
+1668-              "type": "Sri.L.Sankar",
+1669-              "description": "Assistant Professor-ECE",
+1670-              "value": "Member",
+1671-              "isLink": true
+1672-            },
+1673-            {
+1674-              "idNo": "3",
+1675-              "type": "Sri.K.Muralidhar",
+1676-              "description": "Assistant professor-ME",
+1677-              "value": "Member",
+1678-              "isLink": true
+1679-            },
+1680-            {
+1681-              "idNo": "4",
+1682-              "type": "Dr.P.Amaravathi",
+1683-              "description": "Professor-CSE",
+1684-              "value": "Member",
+1685-              "isLink": true
+1686-            },
+1687-            {
+1688-              "idNo": "5",
+1689-              "type": "Smt.N.L.Tejaswani",
+1690-              "description": "Assistant Professor-CSE-DS",
+1691-              "value": "Member",
+1692-              "isLink": true
+1693-            },
+1694-            {
+1695-              "idNo": "6",
+1696-              "type": "Sri.K.Jayarama Krishna",
+1697-              "description": "Assistant Professor-H&S",
+1698-              "value": "Member",
+1699-              "isLink": true
+1700-            },
+1701-            {
+1702-              "idNo": "7",
+1703-              "type": "Dr.A.S.Prasad",
+1704-              "description": "HOD-MBA",
+1705-              "value": "Member",
+1706-              "isLink": true
+1707-            },
+1708-            {
+1709-              "idNo": "8",
+1710-              "type": "Smt.B.Lavanya",
+1711-              "description": "Assistant Professor-H&S",
+1712-              "value": "Member",
+1713-              "isLink": true
+1714-            },
+1715-            {
+1716-              "idNo": "9",
+1717-              "type": "Sri.K.Lalitha",
+1718-              "description": "Assistant Professor-ECE",
+1719-              "value": "Member",
+1720-              "isLink": true
+1721-            },
+1722-            {
+1723-              "idNo": "10",
+1724-              "type": "Sri.B.Santhosh Kumar",
+1725-              "description": "Assistant Professor-CSE",
+1726-              "value": "Member",
+1727-              "isLink": true
+1728-            },
+1729-            {
+1730-              "idNo": "11",
+1731-              "type": "Sri.N.Kondayya",
+1732-              "description": "Assistant Professor-ME",
+1733-              "value": "Member",
+1734-              "isLink": true
+1735-            },
+1736-            {
+1737-              "idNo": "12",
+1738-              "type": "Sri.M.Prasanna Kumar",
+1739-              "description": "Assistant professor-MBA",
+1740-              "value": "Member",
+1741-              "isLink": true
+1742-            }
+1743-          ]
+1744-        }
+1745-      ],
+1746-      "images": [],
+1747-      "customHeaders": [
+1748-        "S.No",
+1749-        "Member Name",
+1750-        "Designation",
+1751-        "Category/Position"
+1752-      ]
+1753-    },
+1754-    {
+1755-      "id": "15",
+1756-      "title": "Library Committee",
+1757-      "url": "#",
+1758-      "categoryId": "cat-2"
+1759-    },
+1760-    {
+1761-      "id": "16",
+1762-      "title": "Student Welfare Committee",
+1763-      "url": "#",
+1764-      "categoryId": "cat-2"
+1765-    },
+1766-    {
+1767-      "id": "17",
+1768-      "title": "Sexual Harassment Cell",
+1769-      "url": "#",
+1770-      "categoryId": "cat-2"
+1771-    },
+1772-    {
+1773-      "id": "18",
+1774-      "title": "Anti-Ragging Committee",
+1775-      "url": "#",
+1776-      "categoryId": "cat-2"
+1777-    },
+1778-    {
+1779-      "id": "19",
+1780-      "title": "Research and Development",
+1781-      "url": "#",
+1782-      "categoryId": "cat-2"
+1783-    },
+1784-    {
+1785-      "id": "19a",
+1786-      "title": "Career Guidance Committee",
+1787-      "url": "#",
+1788-      "categoryId": "cat-2"
+1789-    },
+1790-    {
+1791-      "id": "19b",
+1792-      "title": "Innovation and Entrepreneurship Development",
+1793-      "url": "#",
+1794-      "categoryId": "cat-2"
+1795-    },
+1796-    {
+1797-      "id": "19c",
+1798-      "title": "Institute Innovation Council (IIC)",
+1799-      "url": "#",
+1800-      "categoryId": "cat-2"
+1801-    },
+1802-    {
+1803-      "id": "19d",
+1804-      "title": "NSS Committee",
+1805-      "url": "#",
+1806-      "categoryId": "cat-2"
+1807-    },
+1808-    {
+1809-      "id": "20",
+1810-      "title": "AICTE EOA",
+1811-      "url": "https://www.wise.ac.in/storage/2023/07/EOA-Reports.pdf",
+1812-      "categoryId": "cat-3"
+1813-    },
+1814-    {
+1815-      "id": "21",
+1816-      "title": "NAAC Accreditation",
+1817-      "url": "https://drive.google.com/file/d/1LeTTvwDsLDQuCofVdxJ5uXLN6ZPN6jee/view?usp=drive_link",
+1818-      "categoryId": "cat-3"
+1819-    },
+1820-    {
+1821-      "id": "23",
+1822-      "title": "UGC and JNTUK Autonomous",
+1823-      "url": "#",
+1824-      "categoryId": "cat-3"
+1825-    },
+1826-    {
+1827-      "id": "24",
+1828-      "title": "JNTUK Permanent Affiliation",
+1829-      "url": "#",
+1830-      "categoryId": "cat-3"
