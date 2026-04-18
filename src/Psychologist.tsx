@@ -1,7 +1,7 @@
 import React from 'react';
 import { useCMS } from './CMSContext';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, User, Download, FileDown } from 'lucide-react';
+import { ArrowLeft, User, Download, FileDown, ExternalLink } from 'lucide-react';
 
 export const Psychologist: React.FC = () => {
   const { heroImage, psychologist } = useCMS();
@@ -148,7 +148,7 @@ export const Psychologist: React.FC = () => {
                             rel="noopener noreferrer"
                             className="bg-white/5 hover:bg-blue-600 text-white py-4 rounded-2xl flex items-center justify-center gap-3 font-bold transition-all border border-white/10 hover:border-blue-600"
                           >
-                            <User size={18} /> Open as Detail Page
+                            <ExternalLink size={18} /> View Official Document
                           </a>
                           <a 
                              href={mou.link}
