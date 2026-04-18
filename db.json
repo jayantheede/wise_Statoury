@@ -2119,12 +2119,6 @@
       "categoryId": "cat-1"
     },
     {
-      "id": "8",
-      "title": "Psychologist",
-      "url": "/psychologist",
-      "categoryId": "cat-1"
-    },
-    {
       "id": "10",
       "title": "IQAC",
       "url": "#",
@@ -2985,7 +2979,7 @@
     },
     {
       "id": "38",
-      "title": "UGC 2F and 12B",
+      "title": "UGC 2F",
       "url": "https://drive.google.com/file/d/10kBCflnL5dHA4QujhlZfO0cLe2ffKU-R/view?usp=sharing",
       "categoryId": "cat-4"
     },
@@ -3018,6 +3012,13 @@
       "id": "link-1776483000000",
       "title": "Group Accident Policy",
       "url": "https://drive.google.com/file/d/1P-kKK2dKcrA_pVsYaciiMiHVvxfrcmII/view?usp=sharing",
+      "categoryId": "cat-4",
+      "sections": []
+    },
+    {
+      "id": "link-1776486000000",
+      "title": "Psychologist Profile",
+      "url": "/psychologist",
       "categoryId": "cat-4",
       "sections": []
     }
