@@ -42,9 +42,9 @@ app.get('/api/data', (req, res) => {
     }
   }
 
-  // If local data exists and looks rich, serve it immediately
-  if (localData && localData.links && localData.links.length > 5) {
-    console.log("✅ Serving rich local data.");
+  // If local data exists at all, serve it immediately (Git-synced truth)
+  if (localData && localData.links && localData.links.length > 0) {
+    console.log(`✅ Serving local data with ${localData.links.length} links.`);
     return res.json(localData);
   }
 
